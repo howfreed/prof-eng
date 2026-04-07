@@ -38,4 +38,6 @@
 		<title>{meta.title}</title>
 	{/if}
 </svelte:head>
-{@render children()}
+<div data-site={data.site}>
+	{@render children()}
+</div>

@@ -28,11 +28,24 @@
 		@apply bg-[var(--color-surface-0)] text-zinc-100 antialiased;
 		font-family: var(--font-sans);
 	}
+	[data-site='prodeng'] {
+		--color-accent: #fbbf24;
+		--color-accent-dim: #f59e0b;
+		--shadow-glow: 0 0 80px -20px rgb(251 191 36 / 0.35);
+	}
 }
 
 @layer utilities {
 	.text-gradient {
-		@apply bg-linear-to-r from-cyan-300 via-cyan-400 to-violet-400 bg-clip-text text-transparent;
+		background-image: linear-gradient(
+			to right,
+			color-mix(in oklab, var(--color-accent) 70%, white),
+			var(--color-accent),
+			var(--color-violet)
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
 	}
 	.border-glow {
 		box-shadow:

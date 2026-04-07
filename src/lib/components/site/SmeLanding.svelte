@@ -114,7 +114,7 @@
 		<section class="border-y border-white/10 bg-[var(--color-surface-1)]/35 py-16">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
-					Some of the organisations I've worked with
+					Enterprise experience I now bring to smaller businesses
 				</p>
 				<div
 					class="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-white/80 [text-shadow:0_0_24px_rgb(255_255_255/0.18)]"
