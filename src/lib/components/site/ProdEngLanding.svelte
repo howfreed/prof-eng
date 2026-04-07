@@ -4,6 +4,7 @@
 	import SiteFooter from '$lib/components/site/SiteFooter.svelte';
 	import ContactSection from '$lib/components/site/ContactSection.svelte';
 	import PdlcAgentHumanDiagram from '$lib/components/site/PdlcAgentHumanDiagram.svelte';
+	import HeroScene from '$lib/components/site/HeroScene.svelte';
 	import { listWorkshops } from '$lib/data/workshops';
 	import { listServices } from '$lib/data/services';
 
@@ -100,6 +101,7 @@ const services = listServices('prodeng');
 					<span class="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400"></span>
 					End-to-end product engineering
 				</p>
+				<HeroScene variant="prodeng" />
 				<h1
 					class="font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl"
 				>

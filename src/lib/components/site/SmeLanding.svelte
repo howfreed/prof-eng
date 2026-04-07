@@ -4,6 +4,7 @@
 	import SiteFooter from '$lib/components/site/SiteFooter.svelte';
 	import ContactSection from '$lib/components/site/ContactSection.svelte';
 	import MonthEndN8nDiagram from '$lib/components/site/MonthEndN8nDiagram.svelte';
+	import HeroScene from '$lib/components/site/HeroScene.svelte';
 	import { listWorkshops } from '$lib/data/workshops';
 	import { listServices } from '$lib/data/services';
 
@@ -82,11 +83,12 @@
 					<span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-400"></span>
 					SMB & mid-market AI workflows
 				</p>
+				<HeroScene variant="sme" />
 				<h1
 					class="font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl"
 				>
 					AI feels productive.
-					<span class="mt-2 block text-zinc-500">Has the business actually moved?</span>
+					<span class="mt-2 block text-zinc-500">Has the business moved?</span>
 				</h1>
 				<p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
 					I focus on <span class="text-zinc-200">the work that really matters</span> — the tasks that eat time,
