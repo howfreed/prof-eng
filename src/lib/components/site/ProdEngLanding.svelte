@@ -17,11 +17,11 @@
 	];
 
 	const leaderQuotes = [
-		'AI’s in pockets across the company, but I still can’t tie it to anything that clearly got better.',
-		'People move faster solo. The system as a whole? Same pace.',
-		'I know there’s upside in day-to-day work. I don’t know where to start.',
-		'The roadmap says more AI features. No one pressure-tested the real bottleneck.',
-		'Skip the deck. I need someone beside me in the actual work.'
+		"We shipped an agent in a sprint. Three weeks later we still don’t know if it’s actually doing the right thing.",
+		"Every team has a different definition of done when an AI is in the loop. Nothing connects.",
+		"The agent works in the demo. In production it hallucinates on edge cases nobody wrote tests for.",
+		"We keep debating who owns the AI decisions \u2014 product, eng, or the model. It’s slowing everything down.",
+		"We retrofitted agents into the existing PDLC. The process wasn’t designed for systems that change their own behaviour."
 	];
 
 	const pdlc = [
