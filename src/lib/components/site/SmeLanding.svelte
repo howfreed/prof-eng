@@ -93,8 +93,7 @@
 				<p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
 					I focus on <span class="text-zinc-200">the work that really matters</span> — the tasks that eat time,
 					delay customers, or tie people up. Then I shift the process so AI takes out the repetitive parts, things
-					move faster, and you can see the payoff. Not everyone doing their own thing with a chat tool — <span
-						class="text-cyan-300/90"></span>I improve the process end to end.
+					move faster, and you can see the payoff. 
 				</p>
 				<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 					<a
