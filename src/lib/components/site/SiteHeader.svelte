@@ -54,6 +54,8 @@
 			<span class="text-zinc-500"> co.</span>
 			{#if site === 'prodeng'}
 				<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
+			{:else if site === 'sme'}
+				<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· small and medium business</span>
 			{/if}
 		</a>
 		<nav class="hidden items-center gap-6 lg:flex xl:gap-8" aria-label="Primary">

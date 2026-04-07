@@ -111,7 +111,68 @@
 			</div>
 		</section>
 
-<section id="proof" class="scroll-mt-24 py-24">
+		<section class="border-y border-white/10 bg-[var(--color-surface-1)]/35 py-16">
+			<div class="mx-auto max-w-6xl px-4 sm:px-6">
+				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+					Some of the organisations I've worked with
+				</p>
+				<div
+					class="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-white/80 [text-shadow:0_0_24px_rgb(255_255_255/0.18)]"
+				>
+					{#each logos as name}
+						<span>{name}</span>
+					{/each}
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="scroll-mt-24 py-24">
+			<div class="mx-auto max-w-6xl px-4 sm:px-6">
+				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400/80">Who am I?</p>
+				<h2 class="mt-4 font-[family-name:var(--font-display)] text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+					Hi, I'm Howard, founder of <span class="text-cyan-300">agent</span>native
+				</h2>
+				<p class="mt-6 max-w-2xl leading-relaxed text-zinc-400">
+					I've spent twenty years leading delivery and transformation inside global banks, FTSE 100 businesses,
+					scale-ups, and early-stage ventures. I combine transformation consulting with hands-on product and
+					software delivery, which means I can zoom out to redesign how things work, then zoom in to make change
+					real.
+				</p>
+
+				<div class="mt-8 max-w-2xl rounded-xl border border-cyan-500/20 bg-cyan-500/[0.04] px-6 py-5">
+					<p class="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-400/80">What is agentnative?</p>
+					<p class="mt-3 text-sm leading-relaxed text-zinc-400">
+						Most teams bolt AI onto existing processes. Agentnative means designing the process around what AI
+						can do, with humans accountable for direction, judgement, and standards.
+					</p>
+				</div>
+
+				<p class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Why me</p>
+				<div class="mt-6 grid gap-4 sm:grid-cols-3">
+					{#each [
+						{
+							title: 'Delivery at scale',
+							body: "Banking, FTSE 100 transformation, logistics — I've led delivery inside those environments. I know where execution breaks because I've run it, not just advised on it."
+						},
+						{
+							title: 'I still build',
+							body: "I write code, ship product, and use the same AI tools I recommend. If I say a step can be automated, it's because I've done it, not because I've seen a demo."
+						},
+						{
+							title: 'Direct founder access',
+							body: 'No layers, no juniors, no handoff. I diagnose the problem and I help you fix it, the same person end to end.'
+						}
+					] as card}
+						<div class="flex flex-col rounded-xl border border-white/10 bg-[var(--color-surface-1)]/60 p-5">
+							<h3 class="font-[family-name:var(--font-display)] text-base font-semibold text-white">{card.title}</h3>
+							<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{card.body}</p>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+
+		<section id="proof" class="scroll-mt-24 py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="text-center">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
@@ -322,67 +383,6 @@
 					All workshops can be delivered in person or remotely. Bespoke sessions are available, use the form
 					below to scope one.
 				</p>
-			</div>
-		</section>
-
-		<section class="border-y border-white/10 bg-[var(--color-surface-1)]/35 py-16">
-			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
-					Teams & organisations include
-				</p>
-				<div
-					class="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-white/80 [text-shadow:0_0_24px_rgb(255_255_255/0.18)]"
-				>
-					{#each logos as name}
-						<span>{name}</span>
-					{/each}
-				</div>
-			</div>
-		</section>
-
-		<section id="about" class="scroll-mt-24 py-24">
-			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400/80">Who am I?</p>
-				<h2 class="mt-4 font-[family-name:var(--font-display)] text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-					Hi, I'm Howard, founder of <span class="text-cyan-300">agent</span>native
-				</h2>
-				<p class="mt-6 max-w-2xl leading-relaxed text-zinc-400">
-					I've spent twenty years leading delivery and transformation inside global banks, FTSE 100 businesses,
-					scale-ups, and early-stage ventures. I combine transformation consulting with hands-on product and
-					software delivery, which means I can zoom out to redesign how things work, then zoom in to make change
-					real.
-				</p>
-
-				<div class="mt-8 max-w-2xl rounded-xl border border-cyan-500/20 bg-cyan-500/[0.04] px-6 py-5">
-					<p class="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-400/80">What is agentnative?</p>
-					<p class="mt-3 text-sm leading-relaxed text-zinc-400">
-						Most teams bolt AI onto existing processes. Agentnative means designing the process around what AI
-						can do, with humans accountable for direction, judgement, and standards.
-					</p>
-				</div>
-
-				<p class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Why me</p>
-				<div class="mt-6 grid gap-4 sm:grid-cols-3">
-					{#each [
-						{
-							title: 'Delivery at scale',
-							body: "Banking, FTSE 100 transformation, logistics — I've led delivery inside those environments. I know where execution breaks because I've run it, not just advised on it."
-						},
-						{
-							title: 'I still build',
-							body: "I write code, ship product, and use the same AI tools I recommend. If I say a step can be automated, it's because I've done it, not because I've seen a demo."
-						},
-						{
-							title: 'Direct founder access',
-							body: 'No layers, no juniors, no handoff. I diagnose the problem and I help you fix it, the same person end to end.'
-						}
-					] as card}
-						<div class="flex flex-col rounded-xl border border-white/10 bg-[var(--color-surface-1)]/60 p-5">
-							<h3 class="font-[family-name:var(--font-display)] text-base font-semibold text-white">{card.title}</h3>
-							<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{card.body}</p>
-						</div>
-					{/each}
-				</div>
 			</div>
 		</section>
 

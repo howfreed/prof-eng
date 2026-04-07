@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c ':*)"
+      "Bash(python3 -c ':*)",
+      "WebFetch(domain:www.agent-native.digital)",
+      "WebFetch(domain:theedgeaccelerator.co)"
     ]
   }
 }

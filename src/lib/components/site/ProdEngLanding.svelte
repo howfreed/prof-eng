@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ActionData } from '../../../routes/$types';
+
 	import SiteHeader from '$lib/components/site/SiteHeader.svelte';
 	import SiteFooter from '$lib/components/site/SiteFooter.svelte';
 	import ContactSection from '$lib/components/site/ContactSection.svelte';
@@ -7,7 +7,6 @@
 	import { listWorkshops } from '$lib/data/workshops';
 	import { listServices } from '$lib/data/services';
 
-	let { form = null }: { form?: ActionData | null } = $props();
 
 	const logos = ['Flutter', 'BT', 'DHL Express', 'Marsh', 'Commerzbank', 'Ensek', 'Canada Life', 'abrdn'];
 
@@ -51,6 +50,29 @@
 const services = listServices('prodeng');
 
 	const workshops = listWorkshops('prodeng');
+
+	const recentBuilds = [
+		{
+			tag: 'Tool',
+			title: 'AI Accelerator for Product Teams',
+			desc: 'Practical AI tools for discovery, planning, execution, and iteration, built from repeated bottlenecks seen in real teams. Fast individuals, slow overall performance. The Accelerator helps teams start changing that immediately.',
+			chips: ['Discovery & research', 'Roadmaps & backlogs', 'Delivery & iteration'],
+			quote: null,
+			href: '/builds/ai-accelerator-product-teams'
+		},
+		{
+			tag: 'Client build',
+			title: 'The Edge Accelerator',
+			desc: 'An AI-powered platform shaped end-to-end, from concept and architecture through to iterative development and launch. Helps businesses spot and act on growth opportunities, built with AI-native workflows from the ground up.',
+			chips: [],
+			quote: {
+				text: '"agentnative co. have been instrumental in shaping our EdgeAccelerator product, advising us throughout the process and helping us iteratively build and refine our AI platform."',
+				author: 'Joel Davis',
+				role: 'Founder, Edge Accelerator'
+			},
+			href: 'https://theedgeaccelerator.co/'
+		}
+	];
 </script>
 
 <div class="relative min-h-screen overflow-x-hidden">
@@ -96,11 +118,18 @@ const services = listServices('prodeng');
 					>
 						Get in touch
 					</a>
-<a
+					<a
 						href="#how-it-works"
 						class="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-amber-200/90 hover:underline"
 					>
 						See the approach →
+					</a>
+					<a
+						href="#recent-builds"
+						class="inline-flex items-center gap-1.5 text-sm font-medium text-amber-400/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
+					>
+						<span class="rounded-full bg-amber-400/15 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-300">New</span>
+						AI Accelerator for Product Teams →
 					</a>
 				</div>
 			</div>
@@ -318,6 +347,47 @@ const services = listServices('prodeng');
 				<p class="mt-10 text-center text-sm text-zinc-500">
 					Delivered in person or remotely. Bespoke formats available, use the form below to scope one.
 				</p>
+			</div>
+		</section>
+
+		<section id="recent-builds" class="scroll-mt-24 border-t border-white/5 py-20 sm:py-24">
+			<div class="mx-auto max-w-6xl px-4 sm:px-6">
+				<div class="max-w-2xl">
+					<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Recent builds</p>
+					<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
+						Not just advice. Real builds.
+					</h2>
+					<p class="mt-3 text-zinc-500">Shipping and shaping products, not only strategy decks.</p>
+				</div>
+				<div class="mt-12 grid gap-6 lg:grid-cols-2">
+					{#each recentBuilds as build}
+						<div class="group relative flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30">
+							<a href={build.href} target={build.href.startsWith('http') ? '_blank' : undefined} rel={build.href.startsWith('http') ? 'noopener noreferrer' : undefined} class="absolute inset-0 z-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50" aria-label={build.title}></a>
+							<div class="relative z-10 flex flex-col pointer-events-none">
+								<span class="self-start rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300/90">{build.tag}</span>
+								<h3 class="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold text-white">{build.title}</h3>
+								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{build.desc}</p>
+								{#if build.chips.length > 0}
+									<div class="mt-5 flex flex-wrap gap-2">
+										{#each build.chips as chip}
+											<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-400">{chip}</span>
+										{/each}
+									</div>
+								{/if}
+								{#if build.quote}
+									<blockquote class="mt-5 rounded-xl border-l-2 border-amber-500/40 bg-amber-500/[0.04] px-5 py-4">
+										<p class="text-sm italic leading-relaxed text-zinc-300">{build.quote.text}</p>
+										<footer class="mt-3 text-xs text-zinc-400">
+											<span class="font-semibold text-zinc-200">{build.quote.author}</span>
+											<span class="text-zinc-600"> , {build.quote.role}</span>
+										</footer>
+									</blockquote>
+								{/if}
+								<span class="mt-5 text-sm font-medium text-amber-400/80 transition group-hover:text-amber-300">Learn more →</span>
+							</div>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</section>
 

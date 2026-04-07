@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	type Accent = 'cyan' | 'amber';
 
 	let {
@@ -6,6 +7,11 @@
 	}: {
 		accent?: Accent;
 	} = $props();
+
+	let formEl: HTMLFormElement | null = $state(null);
+	let submitting = $state(false);
+	let submitted = $state(false);
+	let error = $state<string | null>(null);
 
 	const shell = $derived(
 		accent === 'amber'
@@ -25,6 +31,45 @@
 	);
 
 	const formspreeAction = 'https://formspree.io/f/xdalawzp';
+
+	async function handleSubmit(event: SubmitEvent) {
+		// Keep normal POST fallback if JS is disabled.
+		event.preventDefault();
+		if (!formEl || submitting) return;
+
+		submitting = true;
+		error = null;
+
+		try {
+			const res = await fetch(formspreeAction, {
+				method: 'POST',
+				body: new FormData(formEl),
+				headers: { Accept: 'application/json' }
+			});
+
+			if (!res.ok) {
+				const payload = (await res.json().catch(() => null)) as
+					| { errors?: { message?: string }[] }
+					| null;
+				const msg = payload?.errors?.[0]?.message ?? 'Something went wrong. Please try again.';
+				error = msg;
+				return;
+			}
+
+			submitted = true;
+			formEl.reset();
+		} catch {
+			error = 'Could not send your message. Please check your connection and try again.';
+		} finally {
+			submitting = false;
+		}
+	}
+
+	onMount(() => {
+		// If the user hits browser back after a submit, prefer a clean state.
+		submitted = false;
+		error = null;
+	});
 </script>
 
 <section id="contact" class="scroll-mt-24 pb-24">
@@ -42,8 +87,21 @@
 			<form
 				method="POST"
 				action={formspreeAction}
+				bind:this={formEl}
+				onsubmit={handleSubmit}
 				class="relative mt-8 space-y-5"
 			>
+				{#if submitted}
+					<div class="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm text-zinc-300">
+						<span class="font-semibold text-white">Thanks — message sent.</span> I’ll get back to you shortly.
+					</div>
+				{/if}
+				{#if error}
+					<div class="rounded-2xl border border-rose-500/30 bg-rose-500/10 px-5 py-4 text-sm text-rose-200">
+						{error}
+					</div>
+				{/if}
+
 				<div class="grid gap-5 sm:grid-cols-2">
 					<div class="space-y-2">
 						<label for="cn-name" class="text-sm font-medium text-zinc-300">Name</label>
@@ -101,9 +159,14 @@
 				<div class="flex flex-wrap items-center gap-4 pt-2">
 					<button
 						type="submit"
+						disabled={submitting}
 						class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition {btnPrimary}"
 					>
-						Get in Touch
+						{#if submitting}
+							Sending…
+						{:else}
+							Get in Touch
+						{/if}
 					</button>
 				</div>
 			</form>
