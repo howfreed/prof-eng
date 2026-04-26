@@ -54,7 +54,7 @@
 		</a>
 
 		<p class="mt-8 font-[family-name:var(--font-mono)] text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-500">
-			Service
+			{site === 'sme' ? 'What this solves' : 'Service'}
 		</p>
 		<h1 class="mt-3 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight text-white sm:text-4xl">
 			{service.title}

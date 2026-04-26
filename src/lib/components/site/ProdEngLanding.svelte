@@ -69,7 +69,7 @@ const services = listServices('prodeng');
 			quote: {
 				text: '"agentnative co. have been instrumental in shaping our EdgeAccelerator product, advising us throughout the process and helping us iteratively build and refine our AI platform."',
 				author: 'Joel Davis',
-				role: 'Founder, Edge Accelerator'
+				role: 'Founder, Edge Accelerator · Deloitte Fast 500 winner'
 			},
 			href: 'https://theedgeaccelerator.co/'
 		}
@@ -93,7 +93,9 @@ const services = listServices('prodeng');
 	<SiteHeader site="prodeng" />
 
 	<main>
-		<section class="relative px-4 pb-24 pt-28 sm:px-6 sm:pb-32 sm:pt-36">
+		<section
+			class="relative border-b border-white/[0.07] px-4 pb-24 pt-28 sm:px-6 sm:pb-32 sm:pt-36"
+		>
 			<div class="mx-auto max-w-4xl text-center">
 				<p
 					class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-amber-300/90"
@@ -137,7 +139,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section class="border-b border-white/10 bg-[var(--color-surface-1)]/35 py-12">
+		<section class="site-band-b border-b border-white/[0.07] py-12">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
 					Some of the organisations I've worked with
@@ -152,7 +154,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="about" class="scroll-mt-24 border-b border-white/5 py-16 sm:py-20">
+		<section id="about" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-16 sm:py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<!-- Who am I -->
 				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Who am I?</p>
@@ -188,7 +190,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="proof" class="scroll-mt-24 py-24">
+		<section id="proof" class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="text-center">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
@@ -215,7 +217,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section class="border-t border-white/5 bg-[var(--color-surface-1)]/30 py-20">
+		<section class="site-band-a border-b border-white/[0.07] py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<h2 class="font-[family-name:var(--font-display)] text-center text-xl font-semibold text-white sm:text-2xl">
 					What leaders often say
@@ -234,7 +236,7 @@ const services = listServices('prodeng');
 
 		<section
 			id="how-it-works"
-			class="scroll-mt-24 border-y border-white/5 bg-[var(--color-surface-1)]/50 py-20 sm:py-24"
+			class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">How it works</p>
@@ -273,7 +275,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="services" class="scroll-mt-24 border-t border-white/5 py-20 sm:py-24">
+		<section id="services" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="max-w-2xl">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
@@ -295,7 +297,7 @@ const services = listServices('prodeng');
 							</h3>
 							<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{svc.desc}</p>
 							<span class="mt-4 text-sm font-medium text-zinc-400 transition group-hover:text-amber-200/90">
-								Details →
+								Details
 							</span>
 						</a>
 					{/each}
@@ -303,7 +305,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="workshops" class="scroll-mt-24 border-t border-white/5 py-20 sm:py-24">
+		<section id="workshops" class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
 					<div class="max-w-2xl">
@@ -352,7 +354,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="recent-builds" class="scroll-mt-24 border-t border-white/5 py-20 sm:py-24">
+		<section id="recent-builds" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="max-w-2xl">
 					<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Recent builds</p>

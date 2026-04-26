@@ -110,7 +110,7 @@ export const builds: Build[] = [
 		quote: {
 			text: '"agentnative co. have been instrumental in shaping our EdgeAccelerator product, advising us throughout the process and helping us iteratively build and refine our AI platform."',
 			author: 'Joel Davis',
-			role: 'Founder, Edge Accelerator'
+			role: 'Founder, Edge Accelerator · Deloitte Fast 500 winner'
 		},
 		externalHref: 'https://theedgeaccelerator.co',
 		externalLabel: 'Visit The Edge Accelerator',

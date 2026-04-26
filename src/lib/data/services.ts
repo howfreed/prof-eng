@@ -87,32 +87,33 @@ const prodeng: Service[] = [
 const sme: Service[] = [
 	{
 		slug: 'workflow-opportunity-scan',
-		title: 'Workflow opportunity scan',
+		title: 'Find what’s wasting time and money in your business',
 		tag: 'Start here',
-		desc: 'A focused look at where manual effort, handoffs, and rework hurt margins or cycle time, prioritised for your headcount, systems, and budget.',
-		lede: 'No boilerplate transformation deck, enough discovery to know where AI and process change actually bite for a smaller org.',
+		desc: 'A straight look at where manual effort, handoffs, and rework hurt margins, speed, or customer experience — prioritised for your headcount, systems, and budget.',
+		lede: 'Enough discovery to know what to fix first, not a boilerplate transformation deck or a vague “AI strategy”.',
 		includes: [
-			'Short interviews and artifact review: how work really gets done',
-			'Friction map: handoffs, rework, exceptions, and system seams',
-			'Prioritised shortlist: impact, feasibility, and risk in plain language',
-			'Rough sizing: what a pilot might cost in time and attention, not a multi-year programme'
+			'Short conversations and a look at how work really happens today',
+			'A clear picture of delays, rework, exceptions, and where systems get in the way',
+			'A short prioritised list: impact, feasibility, and risk in plain language',
+			'A rough sense of what the next step could cost in time and attention — not a multi-year programme'
 		],
 		idealFor: [
-			'COOs, heads of finance/ops, and founders who need a credible starting point',
-			'Teams already using AI ad hoc but without a shared picture of ROI'
+			'Founders and whoever actually runs finance or ops day to day, and wants a clear place to start—not another vague “AI strategy”',
+			'Small teams where a few people already use AI their own way, but no shared sense of what it’s saving or where the risks are'
 		]
 	},
 	{
 		slug: 'one-process-redesign',
-		title: 'One-process redesign',
+		title: 'Fix one business job from start to finish — including the tools it needs',
 		tag: 'Delivery',
-		desc: 'Pick a single high-value flow (e.g. close week, onboarding, support triage); redesign it with AI in the loop, clear owners, and measurable outcomes.',
-		lede: 'Depth on one workflow beats shallow coverage everywhere, especially when headcount and budget are tight.',
+		desc: 'Pick one high-value job the business feels every week (e.g. month-end, onboarding, triage). Redesign it with clear owners, sensible use of AI, and numbers you can actually track.',
+		lede: 'Going deep on one job beats shallow “AI everywhere” — especially when people and budget are tight. That often includes making email, spreadsheets, and line-of-business tools work together for that job, without a separate IT programme.',
 		includes: [
-			'Joint definition of start/end, systems touched, and exclusions',
-			'Redesign of steps: where AI assists, where humans decide, where you log evidence',
-			'Baseline and target metrics you can track without a data science team',
-			'Handover: documentation and habits so the process doesn’t collapse when the project ends'
+			'Agree where the job starts and ends, what systems it touches, and what is out of scope',
+			'Redesign the steps: where AI helps, where a person must decide, and what you keep as evidence',
+			'When the blocker is tools not talking: proportionate connections, handoffs, and checks — not rip-and-replace',
+			'Baseline and target measures you can track without a data science team',
+			'Handover: simple documentation and habits so the job doesn’t slide back when the project ends'
 		],
 		idealFor: [
 			'Month-end / reporting, customer onboarding, service desk, or similar high-volume flows',
@@ -121,15 +122,15 @@ const sme: Service[] = [
 	},
 	{
 		slug: 'practical-adoption',
-		title: 'Practical adoption',
+		title: 'When everyone uses AI differently, that’s a business risk',
 		tag: 'People',
-		desc: 'Guardrails, templates, and habits so AI use is consistent across the team, not hero prompts that vanish when one person is on leave.',
-		lede: 'SMBs rarely have a centre of excellence. This is minimum viable standards: enough consistency to be safe and fast.',
+		desc: 'Templates, guardrails, and habits so the team uses AI in a consistent, safe way — not brilliant one-off prompts that disappear when one person is on leave.',
+		lede: 'Most small businesses don’t need a “centre of excellence”. They need a minimum sensible standard: fast enough to stick, tight enough to sleep at night.',
 		includes: [
-			'Shared templates and prompt patterns for recurring tasks',
-			'Guardrails for data handling, client-facing comms, and exceptions',
-			'Team rituals: review, spot-checks, and when to escalate',
-			'Manager and IC coaching in short, practical sessions'
+			'Shared patterns for recurring tasks so people aren’t reinventing the wheel',
+			'Clear rules for data, client-facing output, and when to stop and escalate',
+			'Light rituals: what to review, how to spot-check, and who owns exceptions',
+			'Short coaching for managers and staff so it lands in real work, not policy PDFs'
 		],
 		idealFor: [
 			'Teams where AI usage varies wildly by individual',
@@ -138,15 +139,15 @@ const sme: Service[] = [
 	},
 	{
 		slug: 'lightweight-integration',
-		title: 'Lightweight integration',
+		title: 'Stop the copy-paste tax between the tools you already pay for',
 		tag: 'Connect',
-		desc: 'Connect AI sensibly to the spreadsheets, email, and line-of-business tools you already use, without a multi-year integration programme.',
-		lede: 'Pragmatic glue: scripts, connectors, and workflows that respect your current stack instead of replacing it.',
+		desc: 'When the main headache is systems not talking — email, spreadsheets, line-of-business apps — get sensible links and handoffs without a multi-year integration project.',
+		lede: 'Practical glue for how your business actually runs today: enough automation and visibility to trust it, without replacing everything you use.',
 		includes: [
-			'Assessment of what can be connected with proportionate effort',
-			'Automation patterns: scheduled jobs, notifications, human-in-the-loop handoffs',
-			'Options trade-off: buy vs. build vs. “good enough” manual bridge',
-			'Basic observability: logs and failure paths so you’re not flying blind'
+			'Honest view of what can be connected with proportionate effort',
+			'Patterns that fit you: scheduled tasks, notifications, human-in-the-loop steps where judgement matters',
+			'Straight trade-offs: buy, build, or “good enough” bridge — spelled out in business terms',
+			'Basic visibility when something breaks so you’re not flying blind'
 		],
 		idealFor: [
 			'Organisations heavy on Excel, email, and a few LOB tools, not ready for enterprise integration',

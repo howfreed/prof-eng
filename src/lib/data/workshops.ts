@@ -21,14 +21,14 @@ export type Workshop = {
 const sme: Workshop[] = [
 	{
 		slug: 'introduction-to-ai-in-the-workplace',
-		title: 'Introduction to AI in the Workplace',
+		title: 'Introduction to AI at work',
 		duration: 'Half day',
-		audience: 'Leaders and teams',
-		desc: 'How AI is reshaping how work gets done and how organisations create value. Where AI adds real leverage, how to start responsibly, and how to lead the shift, not just observe it.',
+		audience: 'owners, leads, and teams',
+		desc: 'A practical session on what AI is useful for in a small business, where it can save time, where to be careful, and how to get started without adding more noise.',
 		outcomes: [
-			'Shared language for what “AI in the workplace” actually means in your context',
-			'Clarity on where leverage shows up, and where hype creates risk',
-			'A practical lens for responsible adoption and leadership behaviours'
+			'A clear, shared understanding of what "AI at work" should mean for your business right now.',
+			'Clarity on where it helps, and where the risks are real',
+			'Practical habits for adopting it responsibly without a policy manual'
 		],
 		agenda: [
 			{
@@ -36,7 +36,7 @@ const sme: Workshop[] = [
 				duration: '30 min',
 				items: [
 					'What success looks like for the session (outcomes, not slides)',
-					'Quick pulse: how teams already use AI tools today',
+					'Quick pulse: who’s already using AI tools and for what',
 					'Ground rules: judgement, data, and confidentiality'
 				]
 			},
@@ -45,8 +45,8 @@ const sme: Workshop[] = [
 				duration: '45 min',
 				items: [
 					'From copilots to agents: capabilities without the jargon trap',
-					'Why individual speed doesn’t automatically move organisational outcomes',
-					'Where workflow redesign matters more than another tool rollout'
+					'Why one person getting faster doesn’t always move the business',
+					'Where fixing the process matters more than adding another tool'
 				]
 			},
 			{
@@ -54,17 +54,17 @@ const sme: Workshop[] = [
 				duration: '45 min',
 				items: [
 					'High-value workflows vs. one-off tasks: how to tell the difference',
-					'Quality, risk, and ownership: non-negotiables in regulated and client-facing work',
-					'Short group exercise: map one real workflow and its friction points'
+					'Quality, risk, and ownership: what you can’t hand off blindly (including client-facing work)',
+					'Short group exercise: map one real workflow and where it grinds'
 				]
 			},
 			{
 				title: 'Leadership, steering the shift',
 				duration: '40 min',
 				items: [
-					'Roles and decision rights as AI joins day-to-day work',
-					'Psychological safety: experimentation without losing standards',
-					'What “good enough to ship” means when humans stay accountable'
+					'Who decides what when AI is in the loop (even in a flat team)',
+					'Room to try things without dropping your standards',
+					'What “good enough to use” means when someone’s name is still on the work'
 				]
 			},
 			{
@@ -72,8 +72,8 @@ const sme: Workshop[] = [
 				duration: '20 min',
 				items: [
 					'Capture themes and questions from the room',
-					'Optional follow-on: deeper workflow or roles sessions',
-					'How to enquire about a pilot or scoped engagement'
+					'Optional follow-on: deeper workflow or “who does what” sessions',
+					'How to book a small pilot or hands-on help'
 				]
 			}
 		],
@@ -84,23 +84,23 @@ const sme: Workshop[] = [
 	},
 	{
 		slug: 'human-vs-ai-roles-and-responsibilities',
-		title: 'Human vs AI roles and responsibilities',
+		title: 'Who does what when AI joins the work',
 		duration: 'Half day',
-		audience: 'Leaders and teams',
-		desc: 'Hands-on session for organisations rethinking roles as AI joins day-to-day work. How responsibilities shift across product, delivery, engineering, design, leadership, and governance, and what leaders must own, delegate, and redesign.',
+		audience: 'owners, leads, and teams',
+		desc: 'Map one real workflow and learn what should stay with people, what can be automated, and where judgement, review, and accountability still matter.',
 		outcomes: [
-			'A clearer RACI-style view of human vs. automated steps for a real workflow',
-			'Agreement on escalation paths when AI output is wrong or ambiguous',
-			'Concrete governance hooks leaders can adopt without a heavyweight programme'
+			'A simple view of how people and AI can work together in one real workflow.',
+			'Agreement on who to ask when AI output is wrong or unclear',
+			'A few plain rules you can adopt without a transformation programme'
 		],
 		agenda: [
 			{
 				title: 'Framing, why roles matter more than tools',
 				duration: '25 min',
 				items: [
-					'When “faster” breaks handoffs, quality, or auditability',
-					'Examples: drafting, analysis, code, and customer comms with different risk profiles',
-					'Pick one workflow to stress-test in the session (from the room)'
+					'When “faster” breaks handoffs, quality, or your ability to explain what happened',
+					'Examples: drafting, analysis, and customer comms with different risk levels',
+					'Pick one workflow from the room to work through together'
 				]
 			},
 			{
@@ -116,18 +116,18 @@ const sme: Workshop[] = [
 				title: 'Redesign, shifting responsibilities',
 				duration: '50 min',
 				items: [
-					'What moves to AI support vs. what stays with named owners',
-					'How review, sampling, and spot-checks change when volume spikes',
-					'Documentation and traceability: what regulators and clients still need to see'
+					'What moves to AI support vs. what stays with named people',
+					'How review and spot-checks change when volume goes up',
+					'What to keep on record so clients (and any regulator) can follow the thread'
 				]
 			},
 			{
-				title: 'Governance, light-touch guardrails',
+				title: 'Light-touch guardrails',
 				duration: '30 min',
 				items: [
-					'Policies, prompts, and playgrounds: minimum viable standards',
-					'When to stop the line: escalation triggers',
-					'Communication to the wider org without slowing teams down'
+					'Simple standards: prompts, approved tools, and what never goes in',
+					'When to stop and escalate instead of guessing',
+					'How to tell the rest of the team without burying them in process'
 				]
 			},
 			{
@@ -140,18 +140,18 @@ const sme: Workshop[] = [
 			}
 		],
 		formatNotes: [
-			'Bring a real workflow (or an anonymised variant). The session is most valuable when it maps to your operating reality.',
-			'Ideal group size: 8–20 participants; larger groups use breakouts.'
+			'Bring a real workflow (or an anonymised version). Best when it’s your actual day job, not a textbook example.',
+			'Works well from a handful of people up to ~20; larger groups use breakouts.'
 		]
 	},
 	{
 		slug: 'picking-and-scoping-your-first-workflow-pilot',
-		title: 'Picking and scoping your first workflow pilot',
+		title: 'Choosing the first workflow to improve',
 		duration: 'Half day',
-		audience: 'Leaders and operations leads',
-		desc: 'How to choose one high-value workflow, align on outcomes before you build, and run a pilot your team can sustain, without boiling the ocean. Grounded in real back-office and customer-facing processes, not generic AI theatre.',
+		audience: 'owners, leads, and teams',
+		desc: 'Learn how to spot a process worth improving, agree what better looks like, and choose a sensible first workflow to test.',
 		outcomes: [
-			'A shortlist of candidate workflows scored by impact, feasibility, and risk',
+			'A shortlist of realistic workflow ideas scored by value, feasibility, and risk.',
 			'A one-page pilot charter: goal, metrics, scope, and exit criteria',
 			'A realistic 30–90 day cadence for review and iteration'
 		],
@@ -189,8 +189,8 @@ const sme: Workshop[] = [
 				duration: '30 min',
 				items: [
 					'Weekly or fortnightly review: what to inspect vs. what to trust',
-					'When to pause, pivot, or promote from pilot to BAU',
-					'Handover: documentation and training for the wider team'
+					'When to pause, pivot, or fold the pilot into normal working practice',
+					'Handover: enough notes and show-and-tell so the rest of the team can run it'
 				]
 			},
 			{
@@ -203,8 +203,8 @@ const sme: Workshop[] = [
 			}
 		],
 		formatNotes: [
-			'Works well with finance, operations, HR, and customer operations teams; examples can follow month-end, onboarding, or service desk patterns.',
-			'Pre-read optional: one-page outline of 2–3 processes you might improve.'
+			'Examples often come from finance, ops, HR, or customer-facing work (month-end, onboarding, enquiries).',
+			'Optional pre-read: a short list of 2–3 processes you’d like to improve.'
 		]
 	}
 ];

@@ -1,187 +1,150 @@
-<!-- Illustrative automation canvas (n8n-like): nodes, ports, curved edges -->
+<script lang="ts">
+	const steps = [
+		{
+			number: '1',
+			title: 'Close trigger',
+			desc: 'Scheduled month-end',
+			color: 'cyan',
+			icon: 'calendar'
+		},
+		{
+			number: '2',
+			title: 'Pull source data',
+			desc: 'Ledger - balances - journals',
+			color: 'blue',
+			icon: 'database'
+		},
+		{
+			number: '3',
+			title: 'Reconcile & flag',
+			desc: 'Variance checks - rules',
+			color: 'amber',
+			icon: 'target'
+		},
+		{
+			number: '4',
+			title: 'AI draft commentary',
+			desc: 'First-pass narrative',
+			color: 'violet',
+			icon: 'spark'
+		},
+		{
+			number: '5',
+			title: 'Finance review',
+			desc: 'Judgement - sign-off',
+			color: 'pink',
+			icon: 'review'
+		},
+		{
+			number: '6',
+			title: 'Board / client pack',
+			desc: 'Ready to send',
+			color: 'emerald',
+			icon: 'pack'
+		}
+	];
+
+	const colorClass = (color: string) => {
+		if (color === 'blue') return 'border-sky-400/35 text-sky-300 shadow-[0_0_30px_-18px_rgb(56_189_248/0.9)]';
+		if (color === 'amber') return 'border-amber-400/35 text-amber-300 shadow-[0_0_30px_-18px_rgb(251_191_36/0.9)]';
+		if (color === 'violet') return 'border-violet-400/35 text-violet-300 shadow-[0_0_30px_-18px_rgb(167_139_250/0.9)]';
+		if (color === 'pink') return 'border-pink-400/35 text-pink-300 shadow-[0_0_30px_-18px_rgb(244_114_182/0.9)]';
+		if (color === 'emerald') return 'border-emerald-400/35 text-emerald-300 shadow-[0_0_30px_-18px_rgb(52_211_153/0.9)]';
+		return 'border-cyan-300/35 text-cyan-300 shadow-[0_0_30px_-18px_rgb(34_211_238/0.9)]';
+	};
+</script>
+
 <div
-	class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117] shadow-[inset_0_1px_0_rgb(255_255_255/0.04)]"
+	class="relative overflow-hidden rounded-2xl border border-cyan-300/15 bg-[#07111b]/85 px-5 py-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] sm:px-7"
 	role="img"
-	aria-label="Example month-end workflow: trigger, ledger pull, reconcile, AI commentary, finance review and published pack, with an exception branch"
+	aria-label="Illustrative month-end close workflow from close trigger through board or client pack, with an exception queue"
 >
 	<div
-		class="pointer-events-none absolute inset-0 opacity-[0.45] [background-image:radial-gradient(rgb(255_255_255/0.08)_1px,transparent_1px)] [background-size:14px_14px]"
+		class="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:22px_22px]"
 	></div>
-	<div class="relative px-2 py-4 sm:px-4 sm:py-5">
-		<p class="mb-3 text-center text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-500 sm:text-xs">
-			Example orchestration · month-end close
+	<div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_5%,rgb(34_211_238/0.12),transparent_36%)]"></div>
+
+	<div class="relative">
+		<p class="text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+			Illustrative workflow - month-end close
 		</p>
-		<div class="overflow-x-auto pb-1">
-			<svg
-				class="mx-auto h-auto min-w-[640px] sm:min-w-0"
-				viewBox="0 0 1000 200"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				aria-hidden="true"
-			>
-				<defs>
-					<filter id="n8n-node-shadow" x="-10%" y="-10%" width="120%" height="120%">
-						<feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.45" />
-					</filter>
-				</defs>
 
-				<!-- Main horizontal edges -->
-				<path
-					d="M 160 78 C 172 78 176 78 188 78"
-					stroke="#71717a"
-					stroke-width="2"
-					stroke-linecap="round"
-				/>
-				<path
-					d="M 340 78 C 352 78 356 78 368 78"
-					stroke="#71717a"
-					stroke-width="2"
-					stroke-linecap="round"
-				/>
-				<path
-					d="M 520 78 C 532 78 536 78 548 78"
-					stroke="#71717a"
-					stroke-width="2"
-					stroke-linecap="round"
-				/>
-				<path
-					d="M 700 78 C 712 78 716 78 728 78"
-					stroke="#71717a"
-					stroke-width="2"
-					stroke-linecap="round"
-				/>
-				<path
-					d="M 880 78 C 892 78 896 78 908 78"
-					stroke="#71717a"
-					stroke-width="2"
-					stroke-linecap="round"
-				/>
+		<div class="mt-8 overflow-x-auto pb-3">
+			<div class="grid min-w-[900px] grid-cols-[repeat(6,minmax(0,1fr))] items-start gap-5">
+				{#each steps as step, i}
+					<div class="relative">
+						{#if i < steps.length - 1}
+							<div class="absolute left-full top-12 z-0 h-px w-5 bg-cyan-200/55"></div>
+							<div class="absolute left-[calc(100%+1.05rem)] top-[2.85rem] z-10 h-2 w-2 rounded-full bg-cyan-100 shadow-[0_0_10px_rgb(34_211_238/0.9)]"></div>
+						{/if}
 
-				<!-- Dashed branch: bottom of Reconcile → exception queue -->
-				<path
-					d="M 444 110 C 444 128 432 150 420 158"
-					stroke="#52525b"
-					stroke-width="1.5"
-					stroke-dasharray="4 4"
-					stroke-linecap="round"
-					fill="none"
-				/>
+						<div class="relative z-10 min-h-28 rounded-lg border bg-white/[0.035] p-4 {colorClass(step.color)}">
+							<div class="flex items-center gap-2">
+								<div class="flex h-7 w-7 items-center justify-center rounded-md border border-current/25 bg-current/10">
+									{#if step.icon === 'calendar'}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<rect x="3" y="4" width="18" height="18" rx="2" />
+											<path d="M8 2v4M16 2v4M3 10h18" stroke-linecap="round" />
+										</svg>
+									{:else if step.icon === 'database'}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<ellipse cx="12" cy="5" rx="8" ry="3" />
+											<path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+										</svg>
+									{:else if step.icon === 'target'}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<circle cx="12" cy="12" r="8" />
+											<circle cx="12" cy="12" r="3" />
+											<path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round" />
+										</svg>
+									{:else if step.icon === 'spark'}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<path d="M13 2 9 10l-7 3 7 3 4 8 4-8 7-3-7-3-4-8Z" stroke-linejoin="round" />
+										</svg>
+									{:else if step.icon === 'review'}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<circle cx="12" cy="8" r="4" />
+											<path d="M4 22a8 8 0 0 1 16 0" />
+											<path d="m16 18 1.5 1.5L21 16" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									{:else}
+										<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+											<rect x="5" y="3" width="14" height="18" rx="2" />
+											<path d="M9 8h6M9 12h6M9 16h4" stroke-linecap="round" />
+										</svg>
+									{/if}
+								</div>
+								<span class="font-[family-name:var(--font-display)] text-xl font-bold">{step.number}</span>
+							</div>
+							<h3 class="mt-4 text-sm font-semibold text-white">{step.title}</h3>
+							<p class="mt-2 text-xs leading-relaxed text-zinc-400">{step.desc}</p>
+						</div>
 
-				<!-- Wire port markers (main line) -->
-				<circle cx="160" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="188" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="340" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="368" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="520" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="548" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="700" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="728" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="880" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="908" cy="78" r="3.5" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
-				<circle cx="444" cy="110" r="2.5" fill="#18181b" stroke="#71717a" stroke-width="1.2" />
+						{#if i === 2}
+							<div class="absolute left-1/2 top-full hidden h-9 border-l border-dashed border-zinc-500/80 lg:block"></div>
+						{/if}
+					</div>
+				{/each}
+			</div>
 
-				<!-- 1 Trigger -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="8" y="46" width="152" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="8" y="46" width="5" height="64" rx="2" fill="#ea580c" />
-					<circle cx="34" cy="78" r="14" fill="#27272a" stroke="#52525b" />
-					<path
-						d="M34 71v9l5.5 3.5"
-						stroke="#fb923c"
-						stroke-width="1.6"
-						stroke-linecap="round"
-						fill="none"
-					/>
-					<text x="54" y="73" fill="#fafafa" font-size="11" font-family="system-ui, sans-serif" font-weight="600">
-						Schedule Trigger
-					</text>
-					<text x="54" y="89" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						Cron · month-end
-					</text>
-				</g>
-
-				<!-- 2 Ledger -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="188" y="46" width="152" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="188" y="46" width="5" height="64" rx="2" fill="#2563eb" />
-					<rect x="214" y="66" width="24" height="24" rx="5" fill="#1e3a8a" stroke="#3b82f6" />
-					<text x="220" y="82" fill="#93c5fd" font-size="11" font-family="system-ui">▤</text>
-					<text x="246" y="73" fill="#fafafa" font-size="11" font-family="system-ui, sans-serif" font-weight="600">
-						Ledger pull
-					</text>
-					<text x="246" y="89" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						Balances &amp; journals
-					</text>
-				</g>
-
-				<!-- 3 Reconcile (extra output downward for branch) -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="368" y="46" width="152" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="368" y="46" width="5" height="64" rx="2" fill="#ca8a04" />
-					<rect x="394" y="66" width="24" height="24" rx="5" fill="#422006" stroke="#eab308" />
-					<text x="402" y="82" fill="#fde047" font-size="10" font-family="ui-monospace, monospace"
-						>{'{ }'}</text
-					>
-					<text x="426" y="73" fill="#fafafa" font-size="11" font-family="system-ui, sans-serif" font-weight="600">
-						Reconcile &amp; flag
-					</text>
-					<text x="426" y="89" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						Variances · rules
-					</text>
-				</g>
-
-				<!-- 4 AI -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="548" y="46" width="152" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="548" y="46" width="5" height="64" rx="2" fill="#7c3aed" />
-					<rect x="574" y="66" width="24" height="24" rx="5" fill="#3b0764" stroke="#a78bfa" />
-					<text x="580" y="82" fill="#c4b5fd" font-size="11" font-family="system-ui">✦</text>
-					<text x="606" y="73" fill="#fafafa" font-size="11" font-family="system-ui, sans-serif" font-weight="600">
-						AI: commentary
-					</text>
-					<text x="606" y="89" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						First-pass narrative
-					</text>
-				</g>
-
-				<!-- 5 Finance -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="728" y="46" width="152" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="728" y="46" width="5" height="64" rx="2" fill="#db2777" />
-					<rect x="754" y="66" width="24" height="24" rx="5" fill="#500724" stroke="#f472b6" />
-					<text x="762" y="82" fill="#fbcfe8" font-size="11" font-family="system-ui">✓</text>
-					<text x="786" y="73" fill="#fafafa" font-size="11" font-family="system-ui, sans-serif" font-weight="600">
-						Finance review
-					</text>
-					<text x="786" y="89" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						Judgement · sign-off
-					</text>
-				</g>
-
-				<!-- 6 Publish (green) -->
-				<g filter="url(#n8n-node-shadow)">
-					<rect x="908" y="46" width="84" height="64" rx="10" fill="#18181b" stroke="#3f3f46" />
-					<rect x="908" y="46" width="5" height="64" rx="2" fill="#059669" />
-					<text x="922" y="76" fill="#fafafa" font-size="10.5" font-family="system-ui, sans-serif" font-weight="600">
-						Review pack
-					</text>
-					<text x="922" y="92" fill="#a1a1aa" font-size="9" font-family="system-ui, sans-serif">
-						Leadership
-					</text>
-				</g>
-
-				<!-- Exception branch node -->
-				<g opacity="0.92" filter="url(#n8n-node-shadow)">
-					<rect x="344" y="158" width="152" height="36" rx="8" fill="#18181b" stroke="#52525b" stroke-dasharray="3 2" />
-					<rect x="344" y="158" width="4" height="36" rx="2" fill="#64748b" />
-					<text x="356" y="180" fill="#d4d4d8" font-size="10" font-family="system-ui, sans-serif" font-weight="600">
-						Exception queue
-					</text>
-				</g>
-			</svg>
+			<div class="mt-9 hidden justify-center lg:flex">
+				<div class="rounded-lg border border-zinc-500/35 bg-white/[0.025] px-5 py-3 text-left">
+					<div class="flex items-center gap-3">
+						<svg class="h-5 w-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+							<path d="M12 3 2 21h20L12 3Z" />
+							<path d="M12 9v5M12 17h.01" stroke-linecap="round" />
+						</svg>
+						<div>
+							<p class="text-xs font-semibold text-zinc-200">Exception queue</p>
+							<p class="text-[11px] text-zinc-500">Items for human follow-up</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<p class="mt-1 text-center text-[10px] text-zinc-600 sm:text-xs">
-			Illustrative canvas, inspired by workflow tools; not affiliated with any vendor.
+
+		<p class="text-center text-[10px] text-zinc-600 sm:text-xs">
+			Illustrative example inspired by workflow tools - no vendor affiliation.
 		</p>
 	</div>
 </div>

@@ -5,11 +5,9 @@
 	let mobileOpen = $state(false);
 
 	const navSme = [
-		{ href: '#sme-types', label: 'Sectors' },
-		{ href: '#workflows', label: 'Workflows' },
-		{ href: '#services', label: 'Services' },
-		{ href: '#workshops', label: 'Workshops' },
-		{ href: '#about', label: 'About' },
+		{ href: '#problems', label: 'Problems We Solve' },
+		{ href: '#workflows', label: 'How It Works' },
+		{ href: '#proof', label: 'Results' },
 		{ href: '#contact', label: 'Contact' }
 	];
 
@@ -30,9 +28,7 @@
 	);
 
 	const brandClass = $derived(
-		site === 'prodeng'
-			? 'bg-linear-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent'
-			: 'text-gradient'
+		site === 'prodeng' ? 'bg-linear-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent' : ''
 	);
 
 	const hoverLink = $derived(site === 'prodeng' ? 'hover:text-amber-200/90' : 'hover:text-cyan-300/90');
@@ -48,17 +44,30 @@
 <header
 	class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[var(--color-surface-0)]/80 backdrop-blur-xl"
 >
-	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-		<a href="/" class="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight">
-			<span class={brandClass}>agentnative</span>
-			<span class="text-zinc-500"> co.</span>
-			{#if site === 'prodeng'}
-				<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
-			{:else if site === 'sme'}
-				<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· small and medium business</span>
+	<div class="mx-auto flex h-16 max-w-[75rem] items-center justify-between gap-4 px-4 sm:px-6">
+		<div class="flex min-w-0 items-center gap-3 sm:gap-4">
+			<a
+				href="/"
+				class="inline-flex shrink-0 items-center font-[family-name:var(--font-display)] text-xl font-semibold leading-none tracking-tight sm:text-2xl"
+			>
+				{#if site === 'sme'}
+					<span class="text-cyan-300">agent</span><span class="text-violet-300">native</span>
+					<span class="text-cyan-300"> co.</span>
+				{:else}
+					<span class={brandClass}>agentnative</span>
+					<span class="text-zinc-500"> co.</span>
+					<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
+				{/if}
+			</a>
+			{#if site === 'sme'}
+				<span
+					class="hidden min-w-0 truncate border-l border-white/15 pl-3 text-sm font-medium leading-none text-white sm:inline md:pl-4"
+				>
+					AI Automation for SMEs
+				</span>
 			{/if}
-		</a>
-		<nav class="hidden items-center gap-6 lg:flex xl:gap-8" aria-label="Primary">
+		</div>
+		<nav class="ml-auto hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary">
 			{#each links as { href, label }}
 				<a
 					{href}
@@ -67,7 +76,9 @@
 			{/each}
 		</nav>
 		<div class="flex items-center gap-2">
-			<a href="#contact" class="hidden sm:inline-flex {ctaClass}"> Book a call </a>
+			{#if site === 'prodeng'}
+				<a href="#contact" class="hidden sm:inline-flex {ctaClass}"> Book a call </a>
+			{/if}
 			<button
 				type="button"
 				class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] p-2 text-zinc-300 transition hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 {focusRing} lg:hidden"
@@ -113,7 +124,12 @@
 		hidden={!mobileOpen}
 	>
 		<div class="relative z-50 border-b border-white/10 bg-[var(--color-surface-0)]/95 backdrop-blur-xl">
-			<nav class="mx-auto max-w-6xl px-4 py-4 sm:px-6" aria-label="Mobile">
+			<nav class="mx-auto max-w-[75rem] px-4 py-4 sm:px-6" aria-label="Mobile">
+				{#if site === 'sme'}
+					<p class="mb-3 border-b border-white/10 pb-3 text-sm font-medium text-white sm:hidden">
+						AI Automation for SMEs
+					</p>
+				{/if}
 				<div class="grid gap-1">
 					{#each links as { href, label }}
 						<a
@@ -125,11 +141,23 @@
 						</a>
 					{/each}
 				</div>
-				<div class="mt-4">
-					<a href="#contact" class="inline-flex w-full items-center justify-center {ctaClass}" onclick={() => (mobileOpen = false)}>
-						Book a call
-					</a>
-				</div>
+				{#if site === 'prodeng'}
+					<div class="mt-4">
+						<a href="#contact" class="inline-flex w-full items-center justify-center {ctaClass}" onclick={() => (mobileOpen = false)}>
+							Book a call
+						</a>
+					</div>
+				{:else}
+					<div class="mt-4">
+						<a
+							href="#contact"
+							class="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-zinc-950 shadow-[0_0_24px_-6px_rgb(34_211_238/0.55)] transition hover:bg-cyan-300"
+							onclick={() => (mobileOpen = false)}
+						>
+							Book a discovery call
+						</a>
+					</div>
+				{/if}
 			</nav>
 		</div>
 	</div>

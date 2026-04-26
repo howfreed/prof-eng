@@ -72,7 +72,7 @@
 	});
 </script>
 
-<section id="contact" class="scroll-mt-24 pb-24">
+<section id="contact" class="site-band-b scroll-mt-24 pt-16 pb-24 sm:pt-20">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<div class="relative overflow-hidden rounded-3xl border p-10 sm:p-12 {shell}">
 			<div class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full {glow} blur-3xl"></div>
@@ -80,8 +80,7 @@
 				Get in touch
 			</h2>
 			<p class="relative mt-3 text-zinc-400">
-				Tell me what you’re trying to achieve and what’s getting in the way. I’ll reply with the most sensible next step
-				(and whether an assessment, a pilot, or a workshop is the right fit).
+				Tell me what you’re trying to achieve and what’s getting in the way. I’ll reply with the most sensible next step.
 			</p>
 
 			<form
