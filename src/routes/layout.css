@@ -3,7 +3,8 @@
 
 @theme {
 	--font-display: 'Space Grotesk', system-ui, sans-serif;
-	--font-sans: 'DM Sans', system-ui, sans-serif;
+	/* Match hero / headings: body text uses the same face as logo and display scale */
+	--font-sans: var(--font-display);
 	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
 	--color-surface-0: #0b0c12;
