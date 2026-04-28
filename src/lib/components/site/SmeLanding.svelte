@@ -321,7 +321,7 @@
 						<p
 							class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 						>
-							Who you work with
+							Who am I?
 						</p>
 						<div class="mt-3 h-px w-6 bg-cyan-300"></div>
 						<h2
@@ -375,7 +375,7 @@
 					</div>
 
 					<div
-						class="relative overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-7 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] sm:p-8"
+						class="relative mt-12 overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-7 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] sm:p-8"
 					>
 						<div
 							class="pointer-events-none absolute inset-0 opacity-[0.3] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:24px_24px]"
@@ -438,138 +438,6 @@
 							</div>
 						</div>
 
-						<div
-							class="relative mt-10 grid grid-cols-[auto_minmax(2rem,1fr)_auto_minmax(2rem,1fr)_auto] items-start gap-x-2 gap-y-6 sm:gap-x-3"
-						>
-							<div class="flex flex-col items-center">
-								<div
-									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-zinc-300 sm:h-20 sm:w-20"
-								>
-									<svg
-										class="h-8 w-8 sm:h-9 sm:w-9"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="1.4"
-										aria-hidden="true"
-									>
-										<path d="M12 3v5" />
-										<path d="M5 21v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
-										<path d="M7 21h10" />
-										<rect x="9" y="8" width="6" height="6" rx="1" />
-									</svg>
-								</div>
-								<div
-									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
-								>
-									<p
-										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs"
-									>
-										Workflow
-									</p>
-								</div>
-							</div>
-							<div
-								class="mt-7 flex min-h-0 min-w-0 items-center sm:mt-9"
-								aria-hidden="true"
-							>
-								<div
-									class="h-0 min-w-0 flex-1 border-t border-dotted border-cyan-300/70"
-								></div>
-								<span
-									class="h-2 w-2 shrink-0 rounded-full bg-cyan-300 shadow-[0_0_10px_rgb(34_211_238/0.85)]"
-								></span>
-							</div>
-							<div class="flex flex-col items-center">
-								<div
-									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-8px_rgb(34_211_238/0.85)] sm:h-20 sm:w-20"
-								>
-									<svg
-										class="h-9 w-9 sm:h-10 sm:w-10"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="1.4"
-										aria-hidden="true"
-									>
-										<rect x="5" y="8" width="14" height="10" rx="2" />
-										<path d="M9 8V6a3 3 0 0 1 6 0v2" />
-										<circle
-											cx="10"
-											cy="13"
-											r="1"
-											fill="currentColor"
-											stroke="none"
-										/>
-										<circle
-											cx="14"
-											cy="13"
-											r="1"
-											fill="currentColor"
-											stroke="none"
-										/>
-										<path d="M10 16h4" stroke-linecap="round" />
-									</svg>
-								</div>
-								<div
-									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
-								>
-									<p
-										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs"
-									>
-										AI
-									</p>
-								</div>
-							</div>
-							<div
-								class="mt-7 flex min-h-0 min-w-0 items-center sm:mt-9"
-								aria-hidden="true"
-							>
-								<span
-									class="h-2 w-2 shrink-0 rounded-full bg-cyan-300 shadow-[0_0_10px_rgb(34_211_238/0.85)]"
-								></span>
-								<div
-									class="h-0 min-w-0 flex-1 border-t border-dotted border-cyan-300/70"
-								></div>
-							</div>
-							<div class="flex flex-col items-center">
-								<div
-									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-sky-200 sm:h-20 sm:w-20"
-								>
-									<svg
-										class="h-9 w-9 sm:h-10 sm:w-10"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="1.4"
-										aria-hidden="true"
-									>
-										<circle cx="12" cy="8" r="4" />
-										<path d="M4 22a8 8 0 0 1 16 0" />
-										<circle
-											cx="18"
-											cy="17"
-											r="3"
-											fill="#07111b"
-										/>
-										<path
-											d="m16.8 17 0.8 0.8 1.6-1.8"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-								</div>
-								<div
-									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
-								>
-									<p
-										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs sm:whitespace-nowrap"
-									>
-										Human judgement
-									</p>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 

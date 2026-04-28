@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative hidden overflow-hidden rounded-xl border border-cyan-300/10 bg-[#07111b]/90 p-5 shadow-[0_24px_70px_-34px_rgb(34_211_238/0.4),inset_0_1px_0_rgb(255_255_255/0.06)] sm:p-6 md:block"
+	class="sme-hero-diagram relative hidden overflow-hidden rounded-xl border border-cyan-300/10 bg-[#07111b]/90 p-5 shadow-[0_24px_70px_-34px_rgb(34_211_238/0.4),inset_0_1px_0_rgb(255_255_255/0.06)] sm:p-6 md:block"
 	aria-hidden="true"
 >
 	<div
@@ -19,7 +19,7 @@
 			</p>
 			<div class="flex flex-col gap-3">
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card problem-card flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -30,7 +30,7 @@
 					<span class="text-xs font-medium text-zinc-300">Manual admin</span>
 				</div>
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-cyan-300/15 bg-cyan-300/[0.055] px-3 py-2.5 shadow-[0_0_28px_-18px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card problem-card flex min-h-14 items-center gap-2.5 rounded-md border border-cyan-300/15 bg-cyan-300/[0.055] px-3 py-2.5 shadow-[0_0_28px_-18px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -40,7 +40,7 @@
 					<span class="text-xs font-medium text-zinc-300">Duplicate data</span>
 				</div>
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card problem-card flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<circle cx="12" cy="12" r="10" />
@@ -51,12 +51,13 @@
 			</div>
 		</div>
 
-		<div class="relative hidden h-36 items-center justify-center lg:flex">
+		<div class="flow-connector flow-connector-left relative hidden h-36 items-center justify-center lg:flex">
 			<svg class="absolute inset-y-0 left-0 h-full w-full text-zinc-400/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
 				<path d="M2 22H15C25 22 27 30 27 40V104C27 114 25 122 15 122H2" stroke="currentColor" stroke-width="1.1" />
 				<path d="M27 72H43" stroke="currentColor" stroke-width="1.1" />
 			</svg>
-			<div class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-cyan-500/20 text-cyan-200 shadow-[0_0_22px_rgb(34_211_238/0.55)]">
+			<span class="flow-spark" aria-hidden="true"></span>
+			<div class="flow-node relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-cyan-500/20 text-cyan-200 shadow-[0_0_22px_rgb(34_211_238/0.55)]">
 				<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
 					<path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
@@ -69,9 +70,9 @@
 				The solution
 			</p>
 			<div
-				class="flex min-h-36 w-full flex-col items-center justify-center rounded-xl border border-cyan-300 bg-cyan-400/[0.075] px-4 py-7 shadow-[0_0_38px_-8px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.08)] sm:min-h-40"
+				class="solution-card flex min-h-36 w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-cyan-300 bg-cyan-400/[0.075] px-4 py-7 shadow-[0_0_38px_-8px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.08)] sm:min-h-40"
 			>
-				<svg class="mb-3 h-11 w-11 text-cyan-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+				<svg class="bot-icon mb-3 h-11 w-11 text-cyan-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
 					<rect x="5" y="8" width="14" height="10" rx="2" />
 					<path d="M9 8V6a3 3 0 0 1 6 0v2" />
 					<circle cx="10" cy="13" r="1" fill="currentColor" stroke="none" />
@@ -82,12 +83,13 @@
 			</div>
 		</div>
 
-		<div class="relative hidden h-36 items-center justify-center lg:flex">
+		<div class="flow-connector flow-connector-right relative hidden h-36 items-center justify-center lg:flex">
 			<svg class="absolute inset-y-0 right-0 h-full w-full text-zinc-400/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
 				<path d="M42 22H29C19 22 17 30 17 40V104C17 114 19 122 29 122H42" stroke="currentColor" stroke-width="1.1" />
 				<path d="M1 72H17" stroke="currentColor" stroke-width="1.1" />
 			</svg>
-			<div class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-cyan-500/20 text-cyan-200 shadow-[0_0_22px_rgb(34_211_238/0.55)]">
+			<span class="flow-spark" aria-hidden="true"></span>
+			<div class="flow-node relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-cyan-500/20 text-cyan-200 shadow-[0_0_22px_rgb(34_211_238/0.55)]">
 				<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
 					<path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
@@ -101,7 +103,7 @@
 			</p>
 			<div class="flex flex-col gap-3">
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card outcome-card flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -109,7 +111,7 @@
 					<span class="text-xs font-medium text-zinc-300">Faster turnaround</span>
 				</div>
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-cyan-300/15 bg-cyan-300/[0.055] px-3 py-2.5 shadow-[0_0_28px_-18px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card outcome-card flex min-h-14 items-center gap-2.5 rounded-md border border-cyan-300/15 bg-cyan-300/[0.055] px-3 py-2.5 shadow-[0_0_28px_-18px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -118,7 +120,7 @@
 					<span class="text-xs font-medium text-zinc-300">Fewer errors</span>
 				</div>
 				<div
-					class="flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
+					class="diagram-card outcome-card flex min-h-14 items-center gap-2.5 rounded-md border border-white/12 bg-white/[0.035] px-3 py-2.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]"
 				>
 					<svg class={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -132,3 +134,191 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.sme-hero-diagram {
+		--flow-delay: 0ms;
+	}
+
+	.diagram-card,
+	.solution-card,
+	.flow-connector {
+		animation: diagram-rise 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.problem-card:nth-child(1) {
+		animation-delay: 80ms;
+	}
+
+	.problem-card:nth-child(2) {
+		animation-delay: 160ms;
+	}
+
+	.problem-card:nth-child(3) {
+		animation-delay: 240ms;
+	}
+
+	.flow-connector-left {
+		--flow-delay: 700ms;
+		animation-delay: 340ms;
+	}
+
+	.solution-card {
+		animation-delay: 500ms;
+		position: relative;
+	}
+
+	.flow-connector-right {
+		--flow-delay: 1800ms;
+		animation-delay: 660ms;
+	}
+
+	.outcome-card:nth-child(1) {
+		animation-delay: 840ms;
+	}
+
+	.outcome-card:nth-child(2) {
+		animation-delay: 940ms;
+	}
+
+	.outcome-card:nth-child(3) {
+		animation-delay: 1040ms;
+	}
+
+	.flow-node {
+		animation: node-pulse 2600ms ease-in-out infinite;
+		animation-delay: var(--flow-delay);
+	}
+
+	.flow-spark {
+		position: absolute;
+		top: calc(50% - 3px);
+		left: 0;
+		z-index: 5;
+		width: 6px;
+		height: 6px;
+		border-radius: 9999px;
+		background: rgb(103 232 249);
+		box-shadow: 0 0 14px rgb(34 211 238 / 0.9);
+		opacity: 0;
+		animation: flow-spark 2600ms ease-in-out infinite;
+		animation-delay: var(--flow-delay);
+	}
+
+	.flow-connector-right .flow-spark {
+		animation-delay: var(--flow-delay);
+	}
+
+	.solution-card::after {
+		content: '';
+		position: absolute;
+		inset: -1px;
+		border-radius: inherit;
+		pointer-events: none;
+		background: linear-gradient(90deg, transparent, rgb(103 232 249 / 0.38), transparent);
+		opacity: 0;
+		transform: translateX(-45%);
+		animation: solution-scan 2600ms ease-in-out infinite;
+		animation-delay: 1150ms;
+	}
+
+	.bot-icon {
+		animation: bot-float 3200ms ease-in-out infinite;
+		animation-delay: 900ms;
+	}
+
+	@keyframes diagram-rise {
+		from {
+			opacity: 0;
+			transform: translateY(10px) scale(0.98);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@keyframes node-pulse {
+		0%,
+		48%,
+		100% {
+			transform: scale(1);
+			box-shadow: 0 0 22px rgb(34 211 238 / 0.55);
+		}
+
+		12% {
+			transform: scale(1.08);
+			box-shadow: 0 0 30px rgb(34 211 238 / 0.9);
+		}
+	}
+
+	@keyframes flow-spark {
+		0%,
+		18% {
+			opacity: 0;
+			transform: translateX(4px) scale(0.6);
+		}
+
+		30% {
+			opacity: 1;
+		}
+
+		58% {
+			opacity: 1;
+			transform: translateX(38px) scale(1);
+		}
+
+		72%,
+		100% {
+			opacity: 0;
+			transform: translateX(42px) scale(0.6);
+		}
+	}
+
+	@keyframes solution-scan {
+		0%,
+		40%,
+		100% {
+			opacity: 0;
+			transform: translateX(-45%);
+		}
+
+		52% {
+			opacity: 0.2;
+		}
+
+		68% {
+			opacity: 0;
+			transform: translateX(45%);
+		}
+	}
+
+	@keyframes bot-float {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-3px);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.diagram-card,
+		.solution-card,
+		.flow-connector,
+		.flow-node,
+		.flow-spark,
+		.solution-card::after,
+		.bot-icon {
+			animation: none;
+		}
+
+		.flow-spark,
+		.solution-card::after {
+			display: none;
+		}
+	}
+</style>
