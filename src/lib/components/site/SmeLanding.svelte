@@ -171,10 +171,15 @@
 							I help you identify where work is really slowing down,
 							then improve <span class="text-cyan-300">one</span>
 							workflow end to end first — making your existing
-							tools cooperate. Once that proves value, we expand to
-							the next workflows and train your team to use the
-							improved way of working so the gains stick.
+							tools cooperate. 
 						</p>
+						<p
+						class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-lg"
+					>
+						 Once that proves value, we expand to
+						the next workflows and train your team to use the
+						improved way of working so the gains stick.
+					</p>
 
 						<div class="mt-8 grid gap-3 sm:grid-cols-3">
 							{#each heroFeatures as item, i}
@@ -310,27 +315,24 @@
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div
-					class="grid gap-12 lg:grid-cols-[1fr_0.98fr] lg:items-start"
+					class="grid gap-12 lg:grid-cols-[1.15fr_0.95fr] lg:items-center"
 				>
 					<div>
 						<p
 							class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 						>
-							Who am I?
+							Who you work with
 						</p>
+						<div class="mt-3 h-px w-6 bg-cyan-300"></div>
 						<h2
-							class="mt-5 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
+							class="mt-6 max-w-3xl font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.65rem] lg:leading-[1.08]"
 						>
-							Hi, I'm Howard,
-							<span class="block"
-								>founder of <span class="text-cyan-300"
-									>agentnative</span
-								></span
-							>
+							Enterprise experience for
+							<span class="text-cyan-300">your business.</span>
 						</h2>
-						<div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-start">
+						<div class="mt-10 flex flex-col gap-7 sm:flex-row sm:items-start">
 							<div
-								class="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border border-cyan-300/35 bg-[#07111b] p-1 shadow-[0_0_42px_-14px_rgb(34_211_238/0.85),inset_0_1px_0_rgb(255_255_255/0.1)]"
+								class="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border border-cyan-300/45 bg-[#07111b] p-1.5 shadow-[0_0_42px_-12px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.12)]"
 							>
 								<img
 									src={howardHeadshot}
@@ -344,34 +346,48 @@
 									class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/10"
 								></div>
 							</div>
-							<p
-								class="max-w-xl text-lg leading-relaxed text-zinc-400"
-							>
-								I've spent twenty years leading delivery and
-								transformation inside global banks, FTSE 100
-								businesses, scale-ups, and early-stage ventures. I
-								combine transformation consulting with hands-on
-								product and software delivery, which means I can
-								zoom out to redesign how things work, then zoom in
-								to make change real.
-							</p>
+							<div class="max-w-md text-base leading-relaxed text-zinc-400 sm:text-lg">
+								<p>
+									<span class="font-semibold text-white"
+										>Hi, I'm Howard, founder of
+										<span class="text-cyan-300"
+											>agentnative.</span
+										></span
+									>
+								</p>
+								<p class="mt-4">
+									I help small and medium businesses remove
+									manual work, improve handoffs, and use AI in
+									ways that are practical, safe, and easy for
+									teams to adopt.
+								</p>
+								<p class="mt-5">
+									I've spent twenty years leading delivery and
+									transformation across banks, FTSE 100
+									businesses, scale-ups, and early-stage
+									ventures. Today, I bring that experience
+									directly to SMEs — helping you find where
+									time is leaking, redesign one important
+									workflow, and make the change real.
+								</p>
+							</div>
 						</div>
 					</div>
 
 					<div
-						class="relative overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-8 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] lg:mt-11"
+						class="relative overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-7 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] sm:p-8"
 					>
 						<div
 							class="pointer-events-none absolute inset-0 opacity-[0.3] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:24px_24px]"
 						></div>
 						<div
-							class="relative grid gap-6 sm:grid-cols-[5.5rem_1fr]"
+							class="relative grid gap-6 sm:grid-cols-[4.5rem_1fr]"
 						>
 							<div
-								class="flex h-20 w-20 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-300/10 text-cyan-200 shadow-[0_0_32px_-12px_rgb(34_211_238/0.8)]"
+								class="flex h-16 w-16 items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-300/10 text-cyan-200 shadow-[0_0_32px_-12px_rgb(34_211_238/0.9)]"
 							>
 								<svg
-									class="h-10 w-10"
+									class="h-8 w-8"
 									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
@@ -403,120 +419,155 @@
 							</div>
 							<div>
 								<h3
-									class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white"
+									class="font-[family-name:var(--font-display)] text-xl font-semibold text-white"
 								>
-									What is <span class="text-cyan-300"
-										>agentnative?</span
+									What does <span class="text-cyan-300"
+										>agentnative</span
 									>
+									mean?
 								</h3>
 								<p
-									class="mt-4 text-base leading-relaxed text-zinc-400"
+									class="mt-5 text-base leading-relaxed text-zinc-300"
 								>
-									Most teams bolt AI onto existing processes.
-									agentnative means designing the process
-									around what AI can do, with humans
-									accountable for direction, judgement, and
-									standards.
+									Agentnative means designing workflows
+									around what AI can safely do — while people
+									stay accountable for judgement,
+									relationships, standards, and final
+									decisions.
 								</p>
 							</div>
 						</div>
 
 						<div
-							class="relative mt-10 flex items-center justify-between gap-4"
+							class="relative mt-10 grid grid-cols-[auto_minmax(2rem,1fr)_auto_minmax(2rem,1fr)_auto] items-start gap-x-2 gap-y-6 sm:gap-x-3"
 						>
-							<div
-								class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-zinc-400"
-							>
-								<svg
-									class="h-8 w-8"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-									aria-hidden="true"
+							<div class="flex flex-col items-center">
+								<div
+									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-zinc-300 sm:h-20 sm:w-20"
 								>
-									<circle cx="6" cy="6" r="1.2" /><circle
-										cx="12"
-										cy="6"
-										r="1.2"
-									/><circle cx="18" cy="6" r="1.2" />
-									<circle cx="6" cy="12" r="1.2" /><circle
-										cx="12"
-										cy="12"
-										r="1.2"
-									/><circle cx="18" cy="12" r="1.2" />
-									<circle cx="6" cy="18" r="1.2" /><circle
-										cx="12"
-										cy="18"
-										r="1.2"
-									/><circle cx="18" cy="18" r="1.2" />
-								</svg>
+									<svg
+										class="h-8 w-8 sm:h-9 sm:w-9"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.4"
+										aria-hidden="true"
+									>
+										<path d="M12 3v5" />
+										<path d="M5 21v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
+										<path d="M7 21h10" />
+										<rect x="9" y="8" width="6" height="6" rx="1" />
+									</svg>
+								</div>
+								<div
+									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
+								>
+									<p
+										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs"
+									>
+										Workflow
+									</p>
+								</div>
 							</div>
 							<div
-								class="h-px flex-1 border-t border-dashed border-cyan-300/50"
-							></div>
-							<div
-								class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-8px_rgb(34_211_238/0.85)]"
+								class="mt-7 flex min-h-0 min-w-0 items-center sm:mt-9"
+								aria-hidden="true"
 							>
-								<svg
-									class="h-10 w-10"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.4"
-									aria-hidden="true"
+								<div
+									class="h-0 min-w-0 flex-1 border-t border-dotted border-cyan-300/70"
+								></div>
+								<span
+									class="h-2 w-2 shrink-0 rounded-full bg-cyan-300 shadow-[0_0_10px_rgb(34_211_238/0.85)]"
+								></span>
+							</div>
+							<div class="flex flex-col items-center">
+								<div
+									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-8px_rgb(34_211_238/0.85)] sm:h-20 sm:w-20"
 								>
-									<rect
-										x="5"
-										y="8"
-										width="14"
-										height="10"
-										rx="2"
-									/>
-									<path d="M9 8V6a3 3 0 0 1 6 0v2" />
-									<circle
-										cx="10"
-										cy="13"
-										r="1"
-										fill="currentColor"
-										stroke="none"
-									/>
-									<circle
-										cx="14"
-										cy="13"
-										r="1"
-										fill="currentColor"
-										stroke="none"
-									/>
-									<path d="M10 16h4" stroke-linecap="round" />
-								</svg>
+									<svg
+										class="h-9 w-9 sm:h-10 sm:w-10"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.4"
+										aria-hidden="true"
+									>
+										<rect x="5" y="8" width="14" height="10" rx="2" />
+										<path d="M9 8V6a3 3 0 0 1 6 0v2" />
+										<circle
+											cx="10"
+											cy="13"
+											r="1"
+											fill="currentColor"
+											stroke="none"
+										/>
+										<circle
+											cx="14"
+											cy="13"
+											r="1"
+											fill="currentColor"
+											stroke="none"
+										/>
+										<path d="M10 16h4" stroke-linecap="round" />
+									</svg>
+								</div>
+								<div
+									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
+								>
+									<p
+										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs"
+									>
+										AI
+									</p>
+								</div>
 							</div>
 							<div
-								class="h-px flex-1 border-t border-dashed border-cyan-300/50"
-							></div>
-							<div
-								class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-sky-200"
+								class="mt-7 flex min-h-0 min-w-0 items-center sm:mt-9"
+								aria-hidden="true"
 							>
-								<svg
-									class="h-10 w-10"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.4"
-									aria-hidden="true"
+								<span
+									class="h-2 w-2 shrink-0 rounded-full bg-cyan-300 shadow-[0_0_10px_rgb(34_211_238/0.85)]"
+								></span>
+								<div
+									class="h-0 min-w-0 flex-1 border-t border-dotted border-cyan-300/70"
+								></div>
+							</div>
+							<div class="flex flex-col items-center">
+								<div
+									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.03] text-sky-200 sm:h-20 sm:w-20"
 								>
-									<circle cx="12" cy="8" r="4" />
-									<path d="M4 22a8 8 0 0 1 16 0" />
-									<circle
-										cx="18"
-										cy="17"
-										r="3"
-										fill="#07111b"
-									/>
-									<path
-										d="m16.8 17 0.8 0.8 1.6-1.8"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
+									<svg
+										class="h-9 w-9 sm:h-10 sm:w-10"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.4"
+										aria-hidden="true"
+									>
+										<circle cx="12" cy="8" r="4" />
+										<path d="M4 22a8 8 0 0 1 16 0" />
+										<circle
+											cx="18"
+											cy="17"
+											r="3"
+											fill="#07111b"
+										/>
+										<path
+											d="m16.8 17 0.8 0.8 1.6-1.8"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</div>
+								<div
+									class="mt-3 flex min-h-[2.75rem] w-full flex-col justify-end px-1"
+								>
+									<p
+										class="text-center text-[10px] font-medium uppercase leading-tight tracking-[0.1em] text-zinc-400 sm:text-xs sm:whitespace-nowrap"
+									>
+										Human judgement
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -525,17 +576,17 @@
 				<p
 					class="mt-14 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 				>
-					Why me
+					Why work with me
 				</p>
 				<div class="mt-6 grid gap-5 sm:grid-cols-3">
-					{#each [{ icon: "scale", title: "Delivery at scale", body: "Banking, FTSE 100 transformation, logistics — I've led delivery inside those environments. I know where execution breaks because I've run it, not just advised on it." }, { icon: "code", title: "I still build", body: "I write code, ship product, and use the same AI tools I recommend. If I say a step can be automated, it's because I've done it, not because I've seen a demo." }, { icon: "person", title: "Direct founder access", body: "No layers, no juniors, no handoff. I diagnose the problem and I help you fix it, the same person end to end." }] as card}
+					{#each [{ icon: "target", title: "I know where delivery breaks", body: "I've led delivery in complex environments where delays, rework, and unclear ownership become expensive. I can spot the real bottleneck, not just automate the visible task." }, { icon: "code", title: "I can make it practical", body: "I still write code, ship product, and use the AI tools I recommend. If I suggest automating a step, it is because I understand how it works in practice." }, { icon: "person", title: "You work directly with me", body: "No layers, no juniors, no handoff. I help diagnose the problem, redesign the workflow, and guide the first practical implementation from start to finish." }] as card}
 						<div
-							class="flex flex-col rounded-xl border border-cyan-300/15 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+							class="flex h-full flex-col rounded-xl border border-cyan-300/15 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 						>
 							<div
-								class="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 text-cyan-200"
+								class="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-14px_rgb(34_211_238/0.9)]"
 							>
-								{#if card.icon === "scale"}
+								{#if card.icon === "target"}
 									<svg
 										class="h-7 w-7"
 										viewBox="0 0 24 24"
@@ -544,14 +595,9 @@
 										stroke-width="1.4"
 										aria-hidden="true"
 									>
-										<path
-											d="M4 19V9M10 19V5M16 19v-7M22 19V3"
-										/>
-										<path
-											d="m4 12 6-4 6 3 6-7"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
+										<circle cx="12" cy="12" r="7" />
+										<circle cx="12" cy="12" r="2" />
+										<path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
 									</svg>
 								{:else if card.icon === "code"}
 									<svg
@@ -583,13 +629,13 @@
 								{/if}
 							</div>
 							<h3
-								class="font-[family-name:var(--font-display)] text-lg font-semibold text-white"
+								class="font-[family-name:var(--font-display)] text-xl font-semibold leading-tight text-white"
 							>
 								{card.title}
 							</h3>
-							<div class="mt-3 h-px w-10 bg-cyan-300"></div>
+							<div class="mt-4 h-px w-10 bg-cyan-300"></div>
 							<p
-								class="mt-6 flex-1 text-base leading-relaxed text-zinc-400"
+								class="mt-5 flex-1 text-sm leading-relaxed text-zinc-400"
 							>
 								{card.body}
 							</p>
