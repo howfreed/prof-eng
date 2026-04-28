@@ -47,27 +47,27 @@
 	const ownerQuotes = [
 		{
 			source: "Accountants",
-			quote: "We are still chasing records, rekeying numbers, and double-checking the same work.",
+			quote: "We spend too much time chasing records, checking numbers, and repeating the same work.",
 		},
 		{
 			source: "Dental practices",
-			quote: "If reminders, forms, or follow-up slip, it affects the diary and the patient experience.",
+			quote: "If reminders, forms, and follow-up ran more smoothly, it would support both the diary and the patient experience.",
 		},
 		{
 			source: "Law firms",
-			quote: "I do not need another AI demo. I need client intake and admin to move without constant chasing.",
+			quote: "We would benefit from a smoother way to manage client intake and admin, without so much manual chasing.",
 		},
 		{
 			source: "Estate agents",
-			quote: "Leads come in from everywhere, but viewings and follow-up still rely on manual handoffs.",
+			quote: "Leads come in from different places, and we need an easier way to manage viewings and follow-up.",
 		},
 		{
 			source: "Trades & services",
-			quote: "Quotes, bookings, and invoices live in different places. Too much depends on someone remembering.",
+			quote: "Quotes, bookings, and invoices often sit in different places. Bringing them together would save time and reduce missed steps.",
 		},
 		{
-		source: "Education",
-		quote: "Our staff need less admin and clearer processes, so more time can go into teaching and supporting learners.",
+			source: "Education",
+			quote: "Our staff would benefit from less admin and clearer processes, so they can spend more time supporting learners.",
 		},
 	];
 
@@ -522,17 +522,17 @@
 					<p
 						class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/90"
 					>
-						What SME owners are really saying
+						What SME owners are telling us
 					</p>
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						SMEs do not need more AI hype.
+						SMEs are looking for practical AI that truly helps.
 					</h2>
 					<p class="mt-3 text-lg leading-relaxed text-zinc-300">
-						They need <span class="font-semibold text-cyan-300"
-							>less admin, faster follow-up,</span
-						> and processes that actually run.
+						They want <span class="font-semibold text-cyan-300"
+							>less admin, smoother follow-up,</span
+						> and processes that run more reliably.
 					</p>
 				</div>
 
@@ -606,12 +606,12 @@
 						</svg>
 					</div>
 					<p class="text-sm leading-relaxed text-zinc-300">
-						These are business problems first. Good AI automation
+						These are business needs first. Good AI automation
 						should
 						<span class="font-semibold text-cyan-300"
-							>remove friction, save time, and work reliably</span
+							>reduce friction, save time,</span
 						>
-						in the real business.
+						and help work run smoothly in the real business.
 					</p>
 				</div>
 			</div>
