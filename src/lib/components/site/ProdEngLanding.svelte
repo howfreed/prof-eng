@@ -94,7 +94,7 @@ const services = listServices('prodeng');
 
 	<main>
 		<section
-			class="relative border-b border-white/[0.07] px-4 pb-24 pt-28 sm:px-6 sm:pb-32 sm:pt-36"
+			class="site-section site-band-a relative border-b border-white/[0.07] px-4 pb-24 pt-28 sm:px-6 sm:pb-32 sm:pt-36"
 		>
 			<div class="mx-auto max-w-4xl text-center">
 				<p
@@ -139,7 +139,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section class="site-band-b border-b border-white/[0.07] py-12">
+		<section class="site-section site-band-b border-b border-white/[0.07] py-12">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
 					Some of the organisations I've worked with
@@ -154,7 +154,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="about" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-16 sm:py-20">
+		<section id="about" class="site-section site-band-a scroll-mt-24 border-b border-white/[0.07] py-16 sm:py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<!-- Who am I -->
 				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Who am I?</p>
@@ -190,7 +190,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section id="proof" class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-24">
+		<section id="proof" class="site-section site-band-b scroll-mt-24 border-b border-white/[0.07] py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div class="text-center">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
@@ -217,7 +217,7 @@ const services = listServices('prodeng');
 			</div>
 		</section>
 
-		<section class="site-band-a border-b border-white/[0.07] py-20">
+		<section class="site-section site-band-a border-b border-white/[0.07] py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<h2 class="font-[family-name:var(--font-display)] text-center text-xl font-semibold text-white sm:text-2xl">
 					What leaders often say

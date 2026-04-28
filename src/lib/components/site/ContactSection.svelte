@@ -72,7 +72,7 @@
 	});
 </script>
 
-<section id="contact" class="site-band-b scroll-mt-24 pt-16 pb-24 sm:pt-20">
+<section id="contact" class="site-section site-band-b scroll-mt-24 pt-16 pb-24 sm:pt-20">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<div class="relative overflow-hidden rounded-3xl border p-10 sm:p-12 {shell}">
 			<div class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full {glow} blur-3xl"></div>

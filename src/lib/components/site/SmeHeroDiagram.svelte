@@ -65,7 +65,7 @@
 
 		<!-- Solution -->
 		<div class="flex min-w-0 flex-col items-center gap-4">
-			<p class="font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-400/80">
+			<p class="font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-300">
 				The solution
 			</p>
 			<div
@@ -126,7 +126,7 @@
 						<path d="M23 21v-2a4 4 0 0 0-3-3.87" />
 						<path d="M16 3.13a4 4 0 0 1 0 7.75" />
 					</svg>
-					<span class="text-xs font-medium text-zinc-300">More time for real work</span>
+					<span class="text-xs font-medium text-zinc-300">Time <br/>back</span>
 				</div>
 			</div>
 		</div>

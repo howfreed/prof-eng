@@ -21,14 +21,14 @@ export type Workshop = {
 const sme: Workshop[] = [
 	{
 		slug: 'introduction-to-ai-in-the-workplace',
-		title: 'Introduction to AI at work',
+		title: 'Practical AI Foundations for Small Teams',
 		duration: 'Half day',
-		audience: 'owners, leads, and teams',
-		desc: 'A practical session on what AI is useful for in a small business, where it can save time, where to be careful, and how to get started without adding more noise.',
+		audience: 'owners, managers, and teams',
+		desc: 'A plain-English session on where AI helps in a small business, where people still need to be careful, and how to start using it without adding more noise.',
 		outcomes: [
-			'A clear, shared understanding of what "AI at work" should mean for your business right now.',
+			'A shared view of what "AI at work" should mean for your business right now.',
 			'Clarity on where it helps, and where the risks are real',
-			'Practical habits for adopting it responsibly without a policy manual'
+			'Practical habits for using it responsibly without a policy manual'
 		],
 		agenda: [
 			{
@@ -84,12 +84,12 @@ const sme: Workshop[] = [
 	},
 	{
 		slug: 'human-vs-ai-roles-and-responsibilities',
-		title: 'Who does what when AI joins the work',
+		title: 'Human and AI Roles in the Workflow',
 		duration: 'Half day',
-		audience: 'owners, leads, and teams',
-		desc: 'Map one real workflow and learn what should stay with people, what can be automated, and where judgement, review, and accountability still matter.',
+		audience: 'owners, managers, and teams',
+		desc: 'Map one real workflow and decide what stays with people, what AI can help with, and where judgement, review, and accountability still matter.',
 		outcomes: [
-			'A simple view of how people and AI can work together in one real workflow.',
+			'A simple view of how people and AI should work together in one real workflow.',
 			'Agreement on who to ask when AI output is wrong or unclear',
 			'A few plain rules you can adopt without a transformation programme'
 		],
@@ -146,10 +146,10 @@ const sme: Workshop[] = [
 	},
 	{
 		slug: 'picking-and-scoping-your-first-workflow-pilot',
-		title: 'Choosing the first workflow to improve',
+		title: 'First Workflow Pilot Scoping',
 		duration: 'Half day',
-		audience: 'owners, leads, and teams',
-		desc: 'Learn how to spot a process worth improving, agree what better looks like, and choose a sensible first workflow to test.',
+		audience: 'owners, managers, and teams',
+		desc: 'Learn how to spot a workflow worth improving, agree what better looks like, and choose a sensible first workflow to test.',
 		outcomes: [
 			'A shortlist of realistic workflow ideas scored by value, feasibility, and risk.',
 			'A one-page pilot charter: goal, metrics, scope, and exit criteria',

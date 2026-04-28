@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-display: 'Syne', system-ui, sans-serif;
+	--font-display: 'Space Grotesk', system-ui, sans-serif;
 	--font-sans: 'DM Sans', system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
@@ -53,17 +53,26 @@
 			var(--shadow-glow);
 	}
 
-	/* Alternating page bands: opaque fills demarcate sections over the fixed mesh */
-	.site-band-a {
-		background-color: var(--color-surface-0);
+	/* Alternating page bands: set tokens so sections are swappable */
+	.site-section {
+		background-color: var(--site-band-bg, transparent);
+		background-image: var(--site-band-overlay, none);
+		box-shadow: var(--site-band-shadow, none);
 	}
+
+	.site-band-a {
+		--site-band-bg: var(--color-surface-0);
+		--site-band-overlay: none;
+		--site-band-shadow: none;
+	}
+
 	.site-band-b {
-		background-color: var(--color-surface-1);
-		background-image: radial-gradient(
+		--site-band-bg: var(--color-surface-1);
+		--site-band-overlay: radial-gradient(
 			ellipse 140% 65% at 50% 0%,
 			rgb(255 255 255 / 0.05),
 			transparent 52%
 		);
-		box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.055);
+		--site-band-shadow: inset 0 1px 0 rgb(255 255 255 / 0.055);
 	}
 }

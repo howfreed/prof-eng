@@ -87,7 +87,7 @@ const prodeng: Service[] = [
 const sme: Service[] = [
 	{
 		slug: 'workflow-opportunity-scan',
-		title: 'Find what’s wasting time and money in your business',
+		title: 'Find where work is slowing down',
 		tag: 'Start here',
 		desc: 'A straight look at where manual effort, handoffs, and rework hurt margins, speed, or customer experience — prioritised for your headcount, systems, and budget.',
 		lede: 'Enough discovery to know what to fix first, not a boilerplate transformation deck or a vague “AI strategy”.',
@@ -104,7 +104,7 @@ const sme: Service[] = [
 	},
 	{
 		slug: 'one-process-redesign',
-		title: 'Fix one business job from start to finish — including the tools it needs',
+		title: 'Improve one workflow end to end',
 		tag: 'Delivery',
 		desc: 'Pick one high-value job the business feels every week (e.g. month-end, onboarding, triage). Redesign it with clear owners, sensible use of AI, and numbers you can actually track.',
 		lede: 'Going deep on one job beats shallow “AI everywhere” — especially when people and budget are tight. That often includes making email, spreadsheets, and line-of-business tools work together for that job, without a separate IT programme.',
@@ -122,7 +122,7 @@ const sme: Service[] = [
 	},
 	{
 		slug: 'practical-adoption',
-		title: 'When everyone uses AI differently, that’s a business risk',
+		title: 'Train the team so gains stick',
 		tag: 'People',
 		desc: 'Templates, guardrails, and habits so the team uses AI in a consistent, safe way — not brilliant one-off prompts that disappear when one person is on leave.',
 		lede: 'Most small businesses don’t need a “centre of excellence”. They need a minimum sensible standard: fast enough to stick, tight enough to sleep at night.',
@@ -139,7 +139,7 @@ const sme: Service[] = [
 	},
 	{
 		slug: 'lightweight-integration',
-		title: 'Stop the copy-paste tax between the tools you already pay for',
+		title: 'Make your existing tools cooperate',
 		tag: 'Connect',
 		desc: 'When the main headache is systems not talking — email, spreadsheets, line-of-business apps — get sensible links and handoffs without a multi-year integration project.',
 		lede: 'Practical glue for how your business actually runs today: enough automation and visibility to trust it, without replacing everything you use.',

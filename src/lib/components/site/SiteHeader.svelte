@@ -5,9 +5,11 @@
 	let mobileOpen = $state(false);
 
 	const navSme = [
-		{ href: '#problems', label: 'Problems We Solve' },
-		{ href: '#workflows', label: 'How It Works' },
-		{ href: '#proof', label: 'Results' },
+	{ href: '#about', label: 'About' },
+	{ href: '#problems', label: 'Problems' },
+	{ href: '#services', label: 'How I Help' },
+	{ href: '#workflows', label: 'Workflows' },
+	{ href: '#workshops', label: 'Workshops' },
 		{ href: '#contact', label: 'Contact' }
 	];
 
@@ -31,6 +33,10 @@
 		site === 'prodeng' ? 'bg-linear-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent' : ''
 	);
 
+	const brandSizeClass = $derived(site === 'sme' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl');
+	const smeLockupTaglineClass =
+		'min-w-0 max-w-[13.5rem] sm:max-w-[17rem] truncate border-l border-white/15 pl-3 text-[11px] font-medium leading-none tracking-[0.14em] text-white/70 sm:pl-4 sm:text-xs';
+
 	const hoverLink = $derived(site === 'prodeng' ? 'hover:text-amber-200/90' : 'hover:text-cyan-300/90');
 	const focusRing = $derived(
 		site === 'prodeng'
@@ -48,24 +54,24 @@
 		<div class="flex min-w-0 items-center gap-3 sm:gap-4">
 			<a
 				href="/"
-				class="inline-flex shrink-0 items-center font-[family-name:var(--font-display)] text-xl font-semibold leading-none tracking-tight sm:text-2xl"
+				class="inline-flex shrink-0 items-baseline gap-3 font-[family-name:var(--font-display)] font-semibold leading-none tracking-tight sm:gap-4"
 			>
 				{#if site === 'sme'}
-					<span class="text-cyan-300">agent</span><span class="text-violet-300">native</span>
-					<span class="text-cyan-300"> co.</span>
+					<span class="{brandSizeClass} whitespace-nowrap">
+						<span class="text-cyan-300">agent</span><span class="text-violet-300">native</span>
+						<span class="text-cyan-300"> co.</span>
+					</span>
+					<span class="{smeLockupTaglineClass} hidden pb-px sm:inline">
+						AI Automation for SMEs
+					</span>
 				{:else}
-					<span class={brandClass}>agentnative</span>
-					<span class="text-zinc-500"> co.</span>
-					<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
+					<span class="{brandSizeClass}">
+						<span class={brandClass}>agentnative</span>
+						<span class="text-zinc-500"> co.</span>
+						<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
+					</span>
 				{/if}
 			</a>
-			{#if site === 'sme'}
-				<span
-					class="hidden min-w-0 truncate border-l border-white/15 pl-3 text-sm font-medium leading-none text-white sm:inline md:pl-4"
-				>
-					AI Automation for SMEs
-				</span>
-			{/if}
 		</div>
 		<nav class="ml-auto hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary">
 			{#each links as { href, label }}
@@ -126,7 +132,7 @@
 		<div class="relative z-50 border-b border-white/10 bg-[var(--color-surface-0)]/95 backdrop-blur-xl">
 			<nav class="mx-auto max-w-[75rem] px-4 py-4 sm:px-6" aria-label="Mobile">
 				{#if site === 'sme'}
-					<p class="mb-3 border-b border-white/10 pb-3 text-sm font-medium text-white sm:hidden">
+					<p class="mb-3 border-b border-white/10 pb-3 font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-white sm:hidden">
 						AI Automation for SMEs
 					</p>
 				{/if}
