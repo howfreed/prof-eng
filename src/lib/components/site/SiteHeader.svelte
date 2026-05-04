@@ -61,7 +61,7 @@
 						<span class="text-cyan-300"> co.</span>
 					</span>
 					<span class="{smeLockupTaglineClass} hidden pb-px sm:inline">
-						AI Automation for Small and Medium Businesses
+						AI Automation for Small Business
 					</span>
 				{:else}
 					<span class="{brandSizeClass}">
@@ -132,7 +132,7 @@
 			<nav class="mx-auto max-w-[75rem] px-4 py-4 sm:px-6" aria-label="Mobile">
 				{#if site === 'sme'}
 					<p class="mb-3 border-b border-white/10 pb-3 font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-white sm:hidden">
-						AI Automation for Small and Medium Businesses
+						AI Automation for Small Business
 					</p>
 				{/if}
 				<div class="grid gap-1">

@@ -527,7 +527,7 @@
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						Smaller businesses are looking for practical AI that truly helps.
+						Small business owners need practical AI that truly helps.
 					</h2>
 					<p class="mt-3 text-lg leading-relaxed text-zinc-300">
 						They want <span class="font-semibold text-cyan-300"
