@@ -161,8 +161,8 @@
 						<p
 							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-lg"
 						>
-							Most SMEs don’t need “more AI.” They need AI applied
-							to the workflows that matter — so work moves faster,
+							Most small and medium businesses don’t need “more AI.” They need AI applied
+							to the workflows that matter — meaning work moves faster,
 							with fewer delays, handoffs, and errors.
 						</p>
 						<p
