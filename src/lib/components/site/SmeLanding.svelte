@@ -522,12 +522,12 @@
 					<p
 						class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/90"
 					>
-						What SME owners are telling us
+						What small and medium business owners are telling us
 					</p>
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						SMEs are looking for practical AI that truly helps.
+						Smaller businesses are looking for practical AI that truly helps.
 					</h2>
 					<p class="mt-3 text-lg leading-relaxed text-zinc-300">
 						They want <span class="font-semibold text-cyan-300"
