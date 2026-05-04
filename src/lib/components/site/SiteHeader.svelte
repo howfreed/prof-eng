@@ -6,9 +6,8 @@
 
 	const navSme = [
 	{ href: '#about', label: 'About' },
-	{ href: '#problems', label: 'Problems' },
+	{ href: '#problems', label: 'Who' },
 	{ href: '#services', label: 'How I Help' },
-	{ href: '#workflows', label: 'Workflows' },
 	{ href: '#workshops', label: 'Workshops' },
 		{ href: '#contact', label: 'Contact' }
 	];
