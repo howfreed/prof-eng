@@ -112,7 +112,7 @@ const services = listServices('prodeng');
 						measured in production
 					</span>
 				</h1>
-				<p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
+				<p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-300">
 					AI changes what's possible. <span class="text-zinc-200">Ways of working have to change with it.</span> I redesign how product and engineering teams operate across the full PDLC — then build the agentic pipelines that make it real.
 				</p>
 				<div class="mt-10 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
@@ -161,14 +161,14 @@ const services = listServices('prodeng');
 				<h2 class="mt-4 font-[family-name:var(--font-display)] text-2xl font-bold text-white sm:text-3xl md:text-4xl">
 					Hi, I'm Howard, founder of <span class="text-amber-400">agent</span>native
 				</h2>
-				<p class="mt-6 max-w-2xl leading-relaxed text-zinc-400">
+				<p class="mt-6 max-w-2xl leading-relaxed text-zinc-300">
 					I've spent twenty years leading delivery and transformation inside global banks, FTSE 100 businesses, scale-ups, and early-stage ventures. I combine transformation consulting with hands-on product and software delivery, which means I can zoom out to redesign how things work, then zoom in to make change real.
 				</p>
 
 				<!-- What is agentnative callout -->
 				<div class="mt-8 max-w-2xl rounded-xl border border-amber-500/20 bg-amber-500/[0.04] px-6 py-5">
 					<p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/80">What is agentnative?</p>
-					<p class="mt-3 text-sm leading-relaxed text-zinc-400">
+					<p class="mt-3 text-sm leading-relaxed text-zinc-300">
 						Most teams bolt AI onto existing processes. Agentnative means designing the process around what AI can do, with humans accountable for direction, judgement, and standards.
 					</p>
 				</div>
@@ -183,7 +183,7 @@ const services = listServices('prodeng');
 					] as card}
 						<div class="flex flex-col rounded-xl border border-white/10 bg-[var(--color-surface-2)]/60 p-5">
 							<h3 class="font-[family-name:var(--font-display)] text-base font-semibold text-white">{card.title}</h3>
-							<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{card.body}</p>
+							<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-300">{card.body}</p>
 						</div>
 					{/each}
 				</div>
@@ -225,7 +225,7 @@ const services = listServices('prodeng');
 				<ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{#each leaderQuotes as quote}
 						<li
-							class="rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm leading-relaxed text-zinc-400"
+							class="rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm leading-relaxed text-zinc-300"
 						>
 							"{quote}"
 						</li>
@@ -243,7 +243,7 @@ const services = listServices('prodeng');
 				<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 					The end-to-end agentic pipeline
 				</h2>
-				<p class="mt-4 max-w-2xl text-zinc-400 leading-relaxed">
+				<p class="mt-4 max-w-2xl text-zinc-300 leading-relaxed">
 					Most automation stops at the IDE. I build it across the full lifecycle — every phase from first bet to measured outcome — with <span class="text-zinc-200">human gates and clear owners</span> at each handoff, not AI left to run unsupervised.
 				</p>
 			</div>
@@ -264,7 +264,7 @@ const services = listServices('prodeng');
 								<h4 class="mt-2 font-[family-name:var(--font-display)] text-lg font-semibold text-white">
 									{step.phase}
 								</h4>
-								<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{step.desc}</p>
+								<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-300">{step.desc}</p>
 							</li>
 						{/each}
 					</ol>
@@ -295,8 +295,8 @@ const services = listServices('prodeng');
 							<h3 class="mt-2 font-[family-name:var(--font-display)] text-xl font-semibold text-white">
 								{svc.title}
 							</h3>
-							<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{svc.desc}</p>
-							<span class="mt-4 text-sm font-medium text-zinc-400 transition group-hover:text-amber-200/90">
+							<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-300">{svc.desc}</p>
+							<span class="mt-4 text-sm font-medium text-zinc-300 transition group-hover:text-amber-200/90">
 								Details
 							</span>
 						</a>
@@ -340,7 +340,7 @@ const services = listServices('prodeng');
 								>
 									{w.title}
 								</h3>
-								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{w.desc}</p>
+								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-300">{w.desc}</p>
 								<span class="mt-4 text-sm font-medium text-amber-400/90 group-hover:text-amber-300"
 									>Agenda &amp; details →</span
 								>
@@ -370,18 +370,18 @@ const services = listServices('prodeng');
 							<div class="relative z-10 flex flex-col pointer-events-none">
 								<span class="self-start rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300/90">{build.tag}</span>
 								<h3 class="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold text-white">{build.title}</h3>
-								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{build.desc}</p>
+								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-300">{build.desc}</p>
 								{#if build.chips.length > 0}
 									<div class="mt-5 flex flex-wrap gap-2">
 										{#each build.chips as chip}
-											<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-400">{chip}</span>
+											<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300">{chip}</span>
 										{/each}
 									</div>
 								{/if}
 								{#if build.quote}
 									<blockquote class="mt-5 rounded-xl border-l-2 border-amber-500/40 bg-amber-500/[0.04] px-5 py-4">
 										<p class="text-sm italic leading-relaxed text-zinc-300">{build.quote.text}</p>
-										<footer class="mt-3 text-xs text-zinc-400">
+										<footer class="mt-3 text-xs text-zinc-300">
 											<span class="font-semibold text-zinc-200">{build.quote.author}</span>
 											<span class="text-zinc-600"> , {build.quote.role}</span>
 										</footer>

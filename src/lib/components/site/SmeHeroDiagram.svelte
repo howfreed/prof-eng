@@ -14,7 +14,7 @@
 	<div class="relative grid gap-6 lg:grid-cols-[7.4rem_2.8rem_minmax(7rem,1fr)_2.8rem_7.4rem] lg:items-center lg:gap-2">
 		<!-- Problem -->
 		<div class="flex min-w-0 flex-col gap-3">
-			<p class="text-center font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-400/80">
+			<p class="text-center font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-300/80">
 				The problem
 			</p>
 			<div class="flex flex-col gap-3">
@@ -52,7 +52,7 @@
 		</div>
 
 		<div class="flow-connector flow-connector-left relative hidden h-36 items-center justify-center lg:flex">
-			<svg class="absolute inset-y-0 left-0 h-full w-full text-zinc-400/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
+			<svg class="absolute inset-y-0 left-0 h-full w-full text-zinc-300/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
 				<path d="M2 22H15C25 22 27 30 27 40V104C27 114 25 122 15 122H2" stroke="currentColor" stroke-width="1.1" />
 				<path d="M27 72H43" stroke="currentColor" stroke-width="1.1" />
 			</svg>
@@ -84,7 +84,7 @@
 		</div>
 
 		<div class="flow-connector flow-connector-right relative hidden h-36 items-center justify-center lg:flex">
-			<svg class="absolute inset-y-0 right-0 h-full w-full text-zinc-400/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
+			<svg class="absolute inset-y-0 right-0 h-full w-full text-zinc-300/45" viewBox="0 0 44 144" fill="none" aria-hidden="true">
 				<path d="M42 22H29C19 22 17 30 17 40V104C17 114 19 122 29 122H42" stroke="currentColor" stroke-width="1.1" />
 				<path d="M1 72H17" stroke="currentColor" stroke-width="1.1" />
 			</svg>
@@ -98,7 +98,7 @@
 
 		<!-- Outcome -->
 		<div class="flex min-w-0 flex-col gap-3">
-			<p class="text-center font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-400/80">
+			<p class="text-center font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-300/80">
 				The outcome
 			</p>
 			<div class="flex flex-col gap-3">

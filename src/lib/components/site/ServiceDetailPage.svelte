@@ -69,12 +69,12 @@
 			</span>
 		</div>
 
-		<p class="mt-8 text-lg leading-relaxed text-zinc-400">{service.desc}</p>
+		<p class="mt-8 text-lg leading-relaxed text-zinc-300">{service.desc}</p>
 		<p class="mt-6 leading-relaxed text-zinc-500">{service.lede}</p>
 
 		<section class="mt-12">
 			<h2 class="font-[family-name:var(--font-display)] text-xl font-semibold text-white">What’s included</h2>
-			<ul class="mt-4 space-y-3 text-zinc-400">
+			<ul class="mt-4 space-y-3 text-zinc-300">
 				{#each service.includes as line}
 					<li class="flex gap-3">
 						<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full {accent === 'amber' ? 'bg-amber-400/80' : 'bg-cyan-400/80'}"></span>
@@ -101,7 +101,7 @@
 		<div
 			class="mt-14 rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-center sm:p-10"
 		>
-			<p class="text-sm text-zinc-400">
+			<p class="text-sm text-zinc-300">
 				Want to scope this for your context?
 			</p>
 			<a

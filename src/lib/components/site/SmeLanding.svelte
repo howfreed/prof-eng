@@ -152,21 +152,21 @@
 							Solve the bottlenecks first
 						</p>
 						<h1
-							class="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
+							class="mt-4 font-[family-name:var(--font-display)] text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white sm:text-[3.5rem] lg:text-[3.25rem] lg:leading-[1.06]"
 						>
 							Stop losing time and money to <span class="text-cyan-300"
 								>manual work.</span
 							>
 						</h1>
 						<p
-							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-lg"
+							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
 						>
 							Most small and medium businesses don’t need “more AI.” They need AI applied
 							to the workflows that matter — meaning work moves faster,
 							with fewer delays, handoffs, and errors.
 						</p>
 						<p
-							class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-lg"
+							class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
 						>
 							I help you identify where work is really slowing down,
 							then improve <span class="text-cyan-300">one</span>
@@ -174,7 +174,7 @@
 							tools cooperate. 
 						</p>
 						<p
-						class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-lg"
+						class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
 					>
 						 Once that proves value, we expand to
 						the next workflows and train your team to use the
@@ -346,7 +346,7 @@
 									class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/10"
 								></div>
 							</div>
-							<div class="max-w-md text-base leading-relaxed text-zinc-400 sm:text-lg">
+							<div class="max-w-md text-base leading-relaxed text-zinc-300 sm:text-lg">
 								<p>
 									<span class="font-semibold text-white"
 										>Hi, I'm Howard, founder of
@@ -503,7 +503,7 @@
 							</h3>
 							<div class="mt-4 h-px w-10 bg-cyan-300"></div>
 							<p
-								class="mt-5 flex-1 text-sm leading-relaxed text-zinc-400"
+								class="mt-5 flex-1 text-sm leading-relaxed text-zinc-300"
 							>
 								{card.body}
 							</p>
@@ -527,7 +527,7 @@
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						Small business owners need practical AI that truly helps.
+						Small business owners need AI that truly helps.
 					</h2>
 					<p class="mt-3 text-lg leading-relaxed text-zinc-300">
 						They want <span class="font-semibold text-cyan-300"
@@ -727,7 +727,7 @@
 								</div>
 							</div>
 							<p
-								class="relative mt-5 text-sm leading-relaxed text-zinc-400"
+								class="relative mt-5 text-sm leading-relaxed text-zinc-300"
 							>
 								{s.sub}
 							</p>
@@ -788,7 +788,7 @@
 						A practical path from bottleneck to better workflow.
 					</h2>
 					<p
-						class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg"
+						class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg"
 					>
 						Start by finding where work is really slowing down, then
 						improve one workflow end to end. Make your existing tools
@@ -896,12 +896,12 @@
 									{step.title}
 								</h3>
 								<p
-									class="mt-4 flex-1 text-sm leading-relaxed text-zinc-400"
+									class="mt-4 flex-1 text-sm leading-relaxed text-zinc-300"
 								>
 									{step.desc}
 								</p>
 								<span
-									class="mt-7 text-sm font-medium text-zinc-400 transition group-hover:text-cyan-300/90"
+									class="mt-7 text-sm font-medium text-zinc-300 transition group-hover:text-cyan-300/90"
 								>
 									Details
 								</span>
@@ -973,7 +973,7 @@
 									Make your existing tools cooperate
 								</h3>
 								<p
-									class="mt-2 max-w-3xl text-sm leading-relaxed text-zinc-400"
+									class="mt-2 max-w-3xl text-sm leading-relaxed text-zinc-300"
 								>
 									When the bottleneck is copy-paste between
 									email, spreadsheets, and line-of-business
@@ -1012,7 +1012,7 @@
 							Month-end close reveals where the workflow breaks.
 						</h2>
 					</div>
-					<p class="text-base leading-relaxed text-zinc-400 lg:pt-5">
+					<p class="text-base leading-relaxed text-zinc-300 lg:pt-5">
 						For many finance teams, month-end is where delays,
 						handoffs, and rework become obvious. Reconciliations,
 						commentary, approvals, and exceptions still bounce
@@ -1065,7 +1065,7 @@
 									Where work slows down
 								</h3>
 								<p
-									class="mt-3 text-sm leading-relaxed text-zinc-400"
+									class="mt-3 text-sm leading-relaxed text-zinc-300"
 								>
 									Rekeying figures, waiting for updates,
 									chasing commentary, and checking the same
@@ -1107,7 +1107,7 @@
 									Where AI helps most
 								</h3>
 								<p
-									class="mt-3 text-sm leading-relaxed text-zinc-400"
+									class="mt-3 text-sm leading-relaxed text-zinc-300"
 								>
 									Data pulls, first-pass variance notes,
 									exception routing, and review-ready pack
@@ -1153,7 +1153,7 @@
 									Where people stay accountable
 								</h3>
 								<p
-									class="mt-3 text-sm leading-relaxed text-zinc-400"
+									class="mt-3 text-sm leading-relaxed text-zinc-300"
 								>
 									Material judgement, unusual items,
 									approvals, and the final message to leaders,
@@ -1183,10 +1183,10 @@
 						<h2
 							class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 						>
-							Learning sessions that help your team use AI well
+							Help your team use AI well — from day one
 						</h2>
 						<p
-							class="mt-4 max-w-xl text-base leading-relaxed text-zinc-400"
+							class="mt-4 max-w-xl text-base leading-relaxed text-zinc-300"
 						>
 							Practical, plain-English sessions for owners,
 							managers, and teams. Learn where AI helps, decide
@@ -1213,7 +1213,7 @@
 										class="rounded-md border border-cyan-300/15 bg-cyan-300/10 px-2.5 py-1 text-xs font-medium text-cyan-300/90"
 										>{w.duration}</span
 									>
-									<span class="text-xs text-zinc-400"
+									<span class="text-xs text-zinc-300"
 										>For {w.audience}</span
 									>
 								</div>
@@ -1283,7 +1283,7 @@
 											{w.title}
 										</h3>
 										<p
-											class="mt-3 text-sm leading-relaxed text-zinc-400"
+											class="mt-3 text-sm leading-relaxed text-zinc-300"
 										>
 											{w.desc}
 										</p>

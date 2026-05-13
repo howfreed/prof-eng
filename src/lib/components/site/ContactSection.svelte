@@ -79,7 +79,7 @@
 			<h2 class="relative font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 				Get in touch
 			</h2>
-			<p class="relative mt-3 text-zinc-400">
+			<p class="relative mt-3 text-zinc-300">
 				Tell me what you’re trying to achieve and what’s getting in the way. I’ll reply with the most sensible next step.
 			</p>
 

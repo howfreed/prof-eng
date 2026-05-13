@@ -117,7 +117,7 @@
 								<span class="font-[family-name:var(--font-display)] text-xl font-bold">{step.number}</span>
 							</div>
 							<h3 class="mt-4 text-sm font-semibold text-white">{step.title}</h3>
-							<p class="mt-2 text-xs leading-relaxed text-zinc-400">{step.desc}</p>
+							<p class="mt-2 text-xs leading-relaxed text-zinc-300">{step.desc}</p>
 						</div>
 
 						{#if i === 2}

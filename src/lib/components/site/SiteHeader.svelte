@@ -76,7 +76,7 @@
 			{#each links as { href, label }}
 				<a
 					{href}
-					class="text-sm text-zinc-400 transition {hoverLink}"
+					class="text-sm text-zinc-300 transition {hoverLink}"
 				>{label}</a>
 			{/each}
 		</nav>

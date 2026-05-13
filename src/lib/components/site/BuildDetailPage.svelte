@@ -48,12 +48,12 @@
 		>
 			{build.title}
 		</h1>
-		<p class="mt-4 text-lg leading-relaxed text-zinc-400">{build.subheading}</p>
+		<p class="mt-4 text-lg leading-relaxed text-zinc-300">{build.subheading}</p>
 
 		{#if build.chips.length > 0}
 			<div class="mt-5 flex flex-wrap gap-2">
 				{#each build.chips as chip}
-					<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-400">{chip}</span>
+					<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300">{chip}</span>
 				{/each}
 			</div>
 		{/if}
@@ -70,7 +70,7 @@
 					{section.heading}
 				</h2>
 				{#if section.body}
-					<p class="mt-4 leading-relaxed text-zinc-400">{section.body}</p>
+					<p class="mt-4 leading-relaxed text-zinc-300">{section.body}</p>
 				{/if}
 				{#if section.items && section.items.length > 0}
 					<ul class="mt-6 grid gap-4 sm:grid-cols-2">
@@ -79,7 +79,7 @@
 								<h3 class="font-[family-name:var(--font-display)] text-base font-semibold text-white">
 									{item.title}
 								</h3>
-								<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{item.desc}</p>
+								<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-300">{item.desc}</p>
 							</li>
 						{/each}
 					</ul>
@@ -118,7 +118,7 @@
 			<h2 class="font-[family-name:var(--font-display)] text-xl font-semibold text-white">
 				{build.cta.heading}
 			</h2>
-			<p class="mt-3 text-sm leading-relaxed text-zinc-400">{build.cta.body}</p>
+			<p class="mt-3 text-sm leading-relaxed text-zinc-300">{build.cta.body}</p>
 			<div class="mt-6 flex flex-wrap gap-4">
 				<a
 					href={build.cta.primary.href}

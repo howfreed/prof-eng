@@ -70,16 +70,16 @@
 				<span class="h-1.5 w-1.5 rounded-full {dot} opacity-90"></span>
 				{workshop.duration}
 			</span>
-			<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-400">
+			<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300">
 				For: {workshop.audience}
 			</span>
 		</div>
 
-		<p class="mt-8 text-lg leading-relaxed text-zinc-400">{workshop.desc}</p>
+		<p class="mt-8 text-lg leading-relaxed text-zinc-300">{workshop.desc}</p>
 
 		<section class="mt-12">
 			<h2 class="font-[family-name:var(--font-display)] text-xl font-semibold text-white">Outcomes</h2>
-			<ul class="mt-4 space-y-3 text-zinc-400">
+			<ul class="mt-4 space-y-3 text-zinc-300">
 				{#each workshop.outcomes as o}
 					<li class="flex gap-3">
 						<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full {accent === 'amber' ? 'bg-amber-400/80' : 'bg-cyan-400/80'}"></span>
@@ -103,7 +103,7 @@
 								<span class="font-[family-name:var(--font-mono)] text-xs text-zinc-500">{block.duration}</span>
 							{/if}
 						</div>
-						<ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-zinc-400">
+						<ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-zinc-300">
 							{#each block.items as item}
 								<li class="flex gap-2.5">
 									<span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-600"></span>
@@ -133,7 +133,7 @@
 		<div
 			class="mt-14 rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-center sm:p-10"
 		>
-			<p class="text-sm text-zinc-400">
+			<p class="text-sm text-zinc-300">
 				Interested in this workshop or a tailored variant?
 			</p>
 			<a
