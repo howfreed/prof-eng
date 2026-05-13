@@ -34,7 +34,7 @@
 
 	const brandSizeClass = $derived(site === 'sme' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl');
 	const smeLockupTaglineClass =
-		'hidden min-w-0 max-w-[13rem] truncate border-l border-white/12 pl-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40 sm:inline sm:max-w-[16rem] sm:pl-4';
+		'hidden min-w-0 max-w-[13rem] truncate border-l border-white/12 pl-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/75 sm:inline sm:max-w-[16rem] sm:pl-4';
 
 	const hoverLink = $derived(site === 'prodeng' ? 'hover:text-amber-200/90' : 'hover:text-cyan-300/90');
 	const focusRing = $derived(
