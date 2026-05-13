@@ -32,7 +32,7 @@
 		site === 'prodeng' ? 'bg-linear-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent' : ''
 	);
 
-	const brandSizeClass = $derived(site === 'sme' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl');
+	const brandSizeClass = $derived(site === 'sme' ? 'text-[1.65rem] sm:text-[2.1rem]' : 'text-xl sm:text-2xl');
 	const smeLockupTaglineClass =
 		'hidden min-w-0 max-w-[13rem] truncate border-l border-white/12 pl-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/75 sm:inline sm:max-w-[16rem] sm:pl-4';
 
