@@ -32,7 +32,7 @@
 		site === 'prodeng' ? 'bg-linear-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent' : ''
 	);
 
-	const brandSizeClass = $derived(site === 'sme' ? 'text-[1.65rem] sm:text-[2.1rem]' : 'text-xl sm:text-2xl');
+	const brandSizeClass = $derived(site === 'sme' ? 'text-[1.45rem] sm:text-[1.8rem]' : 'text-xl sm:text-2xl');
 	const smeLockupTaglineClass =
 		'hidden min-w-0 max-w-[13rem] truncate border-l border-white/12 pl-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/75 sm:inline sm:max-w-[16rem] sm:pl-4';
 
@@ -56,7 +56,7 @@
 				class="inline-flex shrink-0 items-center gap-3 font-[family-name:var(--font-display)] font-semibold tracking-tight sm:gap-4"
 			>
 				{#if site === 'sme'}
-					<span class="{brandSizeClass} whitespace-nowrap leading-none">
+					<span class="{brandSizeClass} relative -top-[2px] whitespace-nowrap leading-none">
 						<span class="text-cyan-300">agent</span><span class="text-violet-300">native</span>
 						<span class="text-cyan-300"> co.</span>
 					</span>
