@@ -3,7 +3,16 @@
     "allow": [
       "Bash(python3 -c ':*)",
       "WebFetch(domain:www.agent-native.digital)",
-      "WebFetch(domain:theedgeaccelerator.co)"
+      "WebFetch(domain:theedgeaccelerator.co)",
+      "Bash(npx tsc *)",
+      "Bash(npx svelte-check *)",
+      "Bash(git stash *)",
+      "Bash(python -c \"data=open\\('src/lib/components/site/SmeLanding.svelte','rb'\\).read\\(\\); print\\('CRLF' if b'\\\\r\\\\n' in data else 'LF only'\\)\")",
+      "Bash(python -c \"import sys; data=sys.stdin.buffer.read\\(\\); print\\('CRLF' if b'\\\\r\\\\n' in data else 'LF only'\\)\")",
+      "Bash(xxd)",
+      "Bash(perl -i -pe 's/\\\\x{201C}/\"/g; s/\\\\x{201D}/\"/g' src/lib/components/site/SmeLanding.svelte src/lib/components/site/ProdEngLanding.svelte)",
+      "Bash(perl -i -Mutf8 -pe 's/\\\\x{201C}/\"/g; s/\\\\x{201D}/\"/g' src/lib/components/site/SmeLanding.svelte src/lib/components/site/ProdEngLanding.svelte)",
+      "Bash(sed -n '164p' src/lib/components/site/SmeLanding.svelte)"
     ]
   }
 }

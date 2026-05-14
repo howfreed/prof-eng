@@ -7,7 +7,7 @@
 	import HeroScene from '$lib/components/site/HeroScene.svelte';
 	import { listWorkshops } from '$lib/data/workshops';
 	import { listServices } from '$lib/data/services';
-
+	import { reveal } from '$lib/actions/reveal';
 
 	const logos = ['Flutter', 'BT', 'DHL Express', 'Marsh', 'Commerzbank', 'Ensek', 'Canada Life', 'abrdn'];
 
@@ -98,6 +98,7 @@ const services = listServices('prodeng');
 		>
 			<div class="mx-auto max-w-4xl text-center">
 				<p
+					use:reveal
 					class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-amber-300/90"
 				>
 					<span class="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400"></span>
@@ -105,6 +106,7 @@ const services = listServices('prodeng');
 				</p>
 				<HeroScene variant="prodeng" />
 				<h1
+					use:reveal={60}
 					class="font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl"
 				>
 					From idea to launch
@@ -112,10 +114,10 @@ const services = listServices('prodeng');
 						measured in production
 					</span>
 				</h1>
-				<p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-300">
+				<p use:reveal={120} class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-300">
 					AI changes what's possible. <span class="text-zinc-200">Ways of working have to change with it.</span> I redesign how product and engineering teams operate across the full PDLC — then build the agentic pipelines that make it real.
 				</p>
-				<div class="mt-10 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
+				<div use:reveal={160} class="mt-10 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
 					<a
 						href="#contact"
 						class="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-3.5 text-sm font-semibold text-zinc-950 shadow-[0_0_40px_-8px_rgb(251_191_36/0.45)] transition hover:bg-amber-300"
@@ -141,10 +143,11 @@ const services = listServices('prodeng');
 
 		<section class="site-section site-band-b border-b border-white/[0.07] py-12">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+				<p use:reveal class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
 					Some of the organisations I've worked with
 				</p>
 				<div
+					use:reveal={80}
 					class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-white/85 [text-shadow:0_0_26px_rgb(255_255_255/0.22)]"
 				>
 					{#each logos as name}
@@ -157,6 +160,7 @@ const services = listServices('prodeng');
 		<section id="about" class="site-section site-band-a scroll-mt-24 border-b border-white/[0.07] py-16 sm:py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<!-- Who am I -->
+				<div use:reveal>
 				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Who am I?</p>
 				<h2 class="mt-4 font-[family-name:var(--font-display)] text-2xl font-bold text-white sm:text-3xl md:text-4xl">
 					Hi, I'm Howard, founder of <span class="text-amber-400">agent</span>native
@@ -164,9 +168,10 @@ const services = listServices('prodeng');
 				<p class="mt-6 max-w-2xl leading-relaxed text-zinc-300">
 					I've spent twenty years leading delivery and transformation inside global banks, FTSE 100 businesses, scale-ups, and early-stage ventures. I combine transformation consulting with hands-on product and software delivery, which means I can zoom out to redesign how things work, then zoom in to make change real.
 				</p>
+				</div>
 
 				<!-- What is agentnative callout -->
-				<div class="mt-8 max-w-2xl rounded-xl border border-amber-500/20 bg-amber-500/[0.04] px-6 py-5">
+				<div use:reveal={60} class="mt-8 max-w-2xl rounded-xl border border-amber-500/20 bg-amber-500/[0.04] px-6 py-5">
 					<p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/80">What is agentnative?</p>
 					<p class="mt-3 text-sm leading-relaxed text-zinc-300">
 						Most teams bolt AI onto existing processes. Agentnative means designing the process around what AI can do, with humans accountable for direction, judgement, and standards.
@@ -174,14 +179,14 @@ const services = listServices('prodeng');
 				</div>
 
 				<!-- Why me -->
-				<p class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Why me</p>
+				<p use:reveal class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Why me</p>
 				<div class="mt-6 grid gap-4 sm:grid-cols-3">
 					{#each [
 						{ title: 'Delivery at scale', body: "Banking, FTSE 100 transformation, logistics — I've led delivery inside those environments. I know where execution breaks because I've run it, not just advised on it." },
 						{ title: 'I still build', body: "I write code, ship product, and use the same AI tools I recommend. If I say a step can be automated, it's because I've done it, not because I've seen a demo." },
 						{ title: 'Direct founder access', body: 'No layers, no juniors, no handoff. I diagnose the problem and I help you fix it, the same person end to end.' }
-					] as card}
-						<div class="flex flex-col rounded-xl border border-white/10 bg-[var(--color-surface-2)]/60 p-5">
+					] as card, i}
+						<div use:reveal={i * 80} class="card-lift flex flex-col rounded-xl border border-white/10 bg-[var(--color-surface-2)]/60 p-5">
 							<h3 class="font-[family-name:var(--font-display)] text-base font-semibold text-white">{card.title}</h3>
 							<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-300">{card.body}</p>
 						</div>
@@ -192,7 +197,7 @@ const services = listServices('prodeng');
 
 		<section id="proof" class="site-section site-band-b scroll-mt-24 border-b border-white/[0.07] py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="text-center">
+				<div use:reveal class="text-center">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Research and experience tell the same story
 					</h2>
@@ -201,9 +206,10 @@ const services = listServices('prodeng');
 					</p>
 				</div>
 				<div class="mt-14 grid gap-6 md:grid-cols-3">
-					{#each stats as s}
+					{#each stats as s, i}
 						<div
-							class="group rounded-2xl border border-white/10 bg-linear-to-br from-white/[0.06] to-transparent p-8 transition hover:border-amber-500/30"
+							use:reveal={i * 100}
+							class="card-lift group rounded-2xl border border-white/10 bg-linear-to-br from-white/[0.06] to-transparent p-8 transition hover:border-amber-500/30"
 						>
 							<p class="font-[family-name:var(--font-display)] text-4xl font-bold text-gradient md:text-5xl">
 								{s.value}
@@ -219,12 +225,13 @@ const services = listServices('prodeng');
 
 		<section class="site-section site-band-a border-b border-white/[0.07] py-20">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<h2 class="font-[family-name:var(--font-display)] text-center text-xl font-semibold text-white sm:text-2xl">
+				<h2 use:reveal class="font-[family-name:var(--font-display)] text-center text-xl font-semibold text-white sm:text-2xl">
 					What leaders often say
 				</h2>
 				<ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-					{#each leaderQuotes as quote}
+					{#each leaderQuotes as quote, i}
 						<li
+							use:reveal={i * 60}
 							class="rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm leading-relaxed text-zinc-300"
 						>
 							"{quote}"
@@ -239,6 +246,7 @@ const services = listServices('prodeng');
 			class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
+				<div use:reveal>
 				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">How it works</p>
 				<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 					The end-to-end agentic pipeline
@@ -246,6 +254,7 @@ const services = listServices('prodeng');
 				<p class="mt-4 max-w-2xl text-zinc-300 leading-relaxed">
 					Most automation stops at the IDE. I build it across the full lifecycle — every phase from first bet to measured outcome — with <span class="text-zinc-200">human gates and clear owners</span> at each handoff, not AI left to run unsupervised.
 				</p>
+				</div>
 			</div>
 
 			<div class="mx-auto mt-14 max-w-6xl space-y-12 px-4 sm:mt-16 sm:px-6">
@@ -258,7 +267,8 @@ const services = listServices('prodeng');
 					<ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
 						{#each pdlc as step, i}
 							<li
-								class="flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-5 transition hover:border-amber-500/35"
+								use:reveal={i * 80}
+								class="card-lift flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-5 transition hover:border-amber-500/35"
 							>
 								<span class="text-xs font-semibold text-zinc-600">0{i + 1}</span>
 								<h4 class="mt-2 font-[family-name:var(--font-display)] text-lg font-semibold text-white">
@@ -277,7 +287,7 @@ const services = listServices('prodeng');
 
 		<section id="services" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="max-w-2xl">
+				<div use:reveal class="max-w-2xl">
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Services scaled to you
 					</h2>
@@ -286,10 +296,11 @@ const services = listServices('prodeng');
 					</p>
 				</div>
 				<div class="mt-12 grid gap-6 sm:grid-cols-2">
-					{#each services as svc}
+					{#each services as svc, i}
 						<a
+							use:reveal={i * 80}
 							href="/services/prodeng/{svc.slug}"
-							class="group flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50"
+							class="card-lift group flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50"
 						>
 							<span class="text-xs font-semibold uppercase tracking-widest text-zinc-600">{svc.tag}</span>
 							<h3 class="mt-2 font-[family-name:var(--font-display)] text-xl font-semibold text-white">
@@ -307,7 +318,7 @@ const services = listServices('prodeng');
 
 		<section id="workshops" class="site-band-b scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+				<div use:reveal class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
 					<div class="max-w-2xl">
 						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-600">Workshops</p>
 						<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
@@ -323,11 +334,11 @@ const services = listServices('prodeng');
 					</a>
 				</div>
 				<ul class="mt-12 grid gap-6 lg:grid-cols-3">
-					{#each workshops as w}
-						<li>
+					{#each workshops as w, i}
+						<li use:reveal={i * 80}>
 							<a
 								href="/workshops/prodeng/{w.slug}"
-								class="group flex h-full flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/35 hover:bg-[var(--color-surface-2)]/80"
+								class="card-lift group flex h-full flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/35 hover:bg-[var(--color-surface-2)]/80"
 							>
 								<div class="flex flex-wrap items-baseline gap-2">
 									<span class="rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300/90"
@@ -356,7 +367,7 @@ const services = listServices('prodeng');
 
 		<section id="recent-builds" class="site-band-a scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="max-w-2xl">
+				<div use:reveal class="max-w-2xl">
 					<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Recent builds</p>
 					<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Not just advice. Real builds.
@@ -364,8 +375,8 @@ const services = listServices('prodeng');
 					<p class="mt-3 text-zinc-500">Shipping and shaping products, not only strategy decks.</p>
 				</div>
 				<div class="mt-12 grid gap-6 lg:grid-cols-2">
-					{#each recentBuilds as build}
-						<div class="group relative flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30">
+					{#each recentBuilds as build, i}
+						<div use:reveal={i * 100} class="card-lift group relative flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30">
 							<a href={build.href} target={build.href.startsWith('http') ? '_blank' : undefined} rel={build.href.startsWith('http') ? 'noopener noreferrer' : undefined} class="absolute inset-0 z-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50" aria-label={build.title}></a>
 							<div class="relative z-10 flex flex-col pointer-events-none">
 								<span class="self-start rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300/90">{build.tag}</span>

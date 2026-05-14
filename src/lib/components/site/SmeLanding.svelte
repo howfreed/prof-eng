@@ -8,6 +8,7 @@
 	import howardHeadshot from "$lib/assets/howard-headshot.png";
 	import { listWorkshops } from "$lib/data/workshops";
 	import { listServices } from "$lib/data/services";
+	import { reveal } from '$lib/actions/reveal';
 
 	let { form = null }: { form?: ActionData | null } = $props();
 
@@ -147,11 +148,13 @@
 				>
 					<div class="text-left">
 						<p
+							use:reveal
 							class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-400"
 						>
 							Solve the bottlenecks first
 						</p>
 						<h1
+							use:reveal={60}
 							class="mt-4 font-[family-name:var(--font-display)] text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white sm:text-[3.5rem] lg:text-[3.25rem] lg:leading-[1.06]"
 						>
 							Stop losing time and money to <span class="text-cyan-300"
@@ -161,7 +164,7 @@
 						<p
 							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
 						>
-							Most small and medium businesses don’t need “more AI.” They need AI applied
+							Most small and medium businesses don’t need "more AI." They need AI applied
 							to the workflows that matter — meaning work moves faster,
 							with fewer delays, handoffs, and errors.
 						</p>
@@ -171,7 +174,7 @@
 							I help you identify where work is really slowing down,
 							then improve <span class="text-cyan-300">one</span>
 							workflow end to end first — making your existing
-							tools cooperate. 
+							tools cooperate.
 						</p>
 						<p
 						class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
@@ -184,6 +187,7 @@
 						<div class="mt-8 grid gap-3 sm:grid-cols-3">
 							{#each heroFeatures as item, i}
 								<a
+									use:reveal={180 + i * 80}
 									href={item.href}
 									class="flex gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-3 transition hover:border-cyan-500/30 hover:bg-white/[0.04]"
 								>
@@ -245,6 +249,7 @@
 						</div>
 
 						<div
+							use:reveal={160}
 							class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
 						>
 							<a
@@ -280,7 +285,7 @@
 						</div>
 					</div>
 
-					<div class="min-w-0 lg:pt-6">
+					<div use:reveal={80} class="min-w-0 lg:pt-6">
 						<SmeHeroDiagram />
 					</div>
 				</div>
@@ -291,11 +296,13 @@
 		<section class="site-section site-band-b relative border-b border-white/[0.07] py-8">
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<p
+					use:reveal
 					class="text-center text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/90"
 				>
 					Enterprise experience I now bring to smaller businesses
 				</p>
 				<div
+					use:reveal={80}
 					class="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-base font-semibold text-white/70 [text-shadow:0_0_24px_rgb(255_255_255/0.16)]"
 				>
 					{#each logos as name}
@@ -317,7 +324,7 @@
 				<div
 					class="grid gap-12 lg:grid-cols-[1.15fr_0.95fr] lg:items-center"
 				>
-					<div>
+					<div use:reveal>
 						<p
 							class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 						>
@@ -375,7 +382,8 @@
 					</div>
 
 					<div
-						class="relative mt-12 overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-7 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] sm:p-8"
+						use:reveal={80}
+						class="card-lift relative mt-12 overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/80 p-7 shadow-[0_0_48px_-24px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)] sm:p-8"
 					>
 						<div
 							class="pointer-events-none absolute inset-0 opacity-[0.3] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:24px_24px]"
@@ -442,14 +450,16 @@
 				</div>
 
 				<p
+					use:reveal
 					class="mt-14 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 				>
 					Why work with me
 				</p>
 				<div class="mt-6 grid gap-5 sm:grid-cols-3">
-					{#each [{ icon: "target", title: "I know where delivery breaks", body: "I've led delivery in complex environments where delays, rework, and unclear ownership become expensive. I can spot the real bottleneck, not just automate the visible task." }, { icon: "code", title: "I can make it practical", body: "I still write code, ship product, and use the AI tools I recommend. If I suggest automating a step, it is because I understand how it works in practice." }, { icon: "person", title: "You work directly with me", body: "No layers, no juniors, no handoff. I help diagnose the problem, redesign the workflow, and guide the first practical implementation from start to finish." }] as card}
+					{#each [{ icon: "target", title: "I know where delivery breaks", body: "I've led delivery in complex environments where delays, rework, and unclear ownership become expensive. I can spot the real bottleneck, not just automate the visible task." }, { icon: "code", title: "I can make it practical", body: "I still write code, ship product, and use the AI tools I recommend. If I suggest automating a step, it is because I understand how it works in practice." }, { icon: "person", title: "You work directly with me", body: "No layers, no juniors, no handoff. I help diagnose the problem, redesign the workflow, and guide the first practical implementation from start to finish." }] as card, i}
 						<div
-							class="flex h-full flex-col rounded-xl border border-cyan-300/15 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+							use:reveal={i * 100}
+							class="card-lift flex h-full flex-col rounded-xl border border-cyan-300/15 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 						>
 							<div
 								class="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-14px_rgb(34_211_238/0.9)]"
@@ -518,7 +528,7 @@
 			class="site-section site-band-b scroll-mt-24 border-b border-white/[0.07] py-16"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="text-center">
+				<div use:reveal class="text-center">
 					<p
 						class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/90"
 					>
@@ -537,9 +547,10 @@
 				</div>
 
 				<ul class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-					{#each ownerQuotes as quote}
+					{#each ownerQuotes as quote, i}
 						<li
-							class="relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-5 shadow-[0_0_34px_-24px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)]"
+							use:reveal={i * 60}
+							class="card-lift relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-5 shadow-[0_0_34px_-24px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)]"
 						>
 							<div
 								class="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:20px_20px]"
@@ -584,6 +595,7 @@
 				</ul>
 
 				<div
+					use:reveal={80}
 					class="mx-auto mt-4 flex max-w-2xl items-center gap-4 rounded-lg border border-cyan-300/15 bg-[#07111b]/70 px-5 py-3 text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.05)] sm:text-left"
 				>
 					<div
@@ -622,7 +634,7 @@
 			class="site-section site-band-a scroll-mt-24 border-b border-white/[0.07] py-24"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="mx-auto max-w-4xl text-center">
+				<div use:reveal class="mx-auto max-w-4xl text-center">
 					<div class="flex items-center justify-center gap-5">
 						<div
 							class="hidden h-px flex-1 bg-linear-to-r from-transparent via-cyan-300/45 to-cyan-300/15 sm:block"
@@ -646,7 +658,8 @@
 				<div class="mt-10 grid gap-6 md:grid-cols-3">
 					{#each stats as s, i}
 						<div
-							class="group relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-7 shadow-[0_0_40px_-26px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
+							use:reveal={i * 100}
+							class="card-lift group relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-7 shadow-[0_0_40px_-26px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
 						>
 							<div
 								class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:22px_22px]"
@@ -776,7 +789,7 @@
 			class="site-section site-band-b scroll-mt-24 border-b border-white/[0.07] py-20 sm:py-24"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="mx-auto max-w-3xl text-center">
+				<div use:reveal class="mx-auto max-w-3xl text-center">
 					<p
 						class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
 					>
@@ -797,9 +810,10 @@
 					</p>
 				</div>
 				<div class="mt-10 grid gap-5 lg:grid-cols-3">
-					{#each serviceSteps as step}
+					{#each serviceSteps as step, i}
 						<div
-							class="group relative flex min-h-[17rem] flex-col overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/75 p-6 shadow-[0_0_42px_-28px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
+							use:reveal={i * 100}
+							class="card-lift group relative flex min-h-[17rem] flex-col overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/75 p-6 shadow-[0_0_42px_-28px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
 						>
 							<a
 								href={step.href}
@@ -999,7 +1013,7 @@
 			class="site-section site-band-b scroll-mt-24 border-b border-white/[0.07] py-24"
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
-				<div class="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+				<div use:reveal class="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
 					<div>
 						<p
 							class="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-400/90"
@@ -1023,13 +1037,14 @@
 					</p>
 				</div>
 
-				<div class="mt-10">
+				<div use:reveal={80} class="mt-10">
 					<MonthEndN8nDiagram />
 				</div>
 
 				<div class="mt-6 grid gap-5 lg:grid-cols-3">
 					<div
-						class="rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						use:reveal
+						class="card-lift rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1075,7 +1090,8 @@
 						</div>
 					</div>
 					<div
-						class="rounded-2xl border border-violet-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						use:reveal={80}
+						class="card-lift rounded-2xl border border-violet-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1117,7 +1133,8 @@
 						</div>
 					</div>
 					<div
-						class="rounded-2xl border border-emerald-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						use:reveal={160}
+						class="card-lift rounded-2xl border border-emerald-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1172,6 +1189,7 @@
 		>
 			<div class="mx-auto max-w-6xl px-4 sm:px-6">
 				<div
+					use:reveal
 					class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
 				>
 					<div class="max-w-2xl">
@@ -1203,10 +1221,10 @@
 				</div>
 				<ul class="mt-12 grid gap-5 lg:grid-cols-3">
 					{#each workshops as w, i}
-						<li>
+						<li use:reveal={i * 80}>
 							<a
 								href="/workshops/sme/{w.slug}"
-								class="group flex h-full flex-col rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[0_0_36px_-26px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45 hover:bg-[#07111b]/85"
+								class="card-lift group flex h-full flex-col rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[0_0_36px_-26px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45 hover:bg-[#07111b]/85"
 							>
 								<div class="flex flex-wrap items-center gap-3">
 									<span
