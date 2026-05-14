@@ -4,7 +4,6 @@
 	import SiteFooter from "$lib/components/site/SiteFooter.svelte";
 	import ContactSection from "$lib/components/site/ContactSection.svelte";
 	import MonthEndN8nDiagram from "./MonthEndN8nDiagram.svelte";
-	import SmeHeroDiagram from "$lib/components/site/SmeHeroDiagram.svelte";
 	import howardHeadshot from "$lib/assets/howard-headshot.png";
 	import { listWorkshops } from "$lib/data/workshops";
 	import { listServices } from "$lib/data/services";
@@ -118,6 +117,8 @@
 	const integrationService = services.find(
 		(service) => service.slug === "lightweight-integration",
 	);
+
+	const heygenEmbedUrl = "https://app.heygen.com/embeds/4f10e4fbdc5a48039716aaa67e00c4ae";
 </script>
 
 <div class="relative min-h-screen overflow-x-hidden">
@@ -144,7 +145,7 @@
 		>
 			<div class="mx-auto max-w-6xl">
 				<div
-					class="grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-12 xl:gap-14"
+					class="grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-x-12 lg:gap-y-8 xl:gap-x-14"
 				>
 					<div class="text-left">
 						<p
@@ -182,110 +183,147 @@
 							Once that proves value, we expand to the next workflow and train your team to use
 							the improved ways of working so the gains stick.
 						</p>
+					</div>
 
-						<div class="mt-8 grid gap-3 sm:grid-cols-3">
-							{#each heroFeatures as item, i}
-								<a
-									use:reveal={180 + i * 80}
-									href={item.href}
-									class="group flex min-h-20 gap-3 rounded-2xl border border-cyan-300/10 bg-linear-to-br from-cyan-300/[0.06] to-white/[0.025] p-3.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] transition hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-cyan-300/[0.07] hover:shadow-[0_18px_36px_-28px_rgb(34_211_238/0.7),inset_0_1px_0_rgb(255_255_255/0.08)]"
-								>
-									{#if i === 0}
-										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5"
-											aria-hidden="true"
-										>
-											<circle cx="11" cy="11" r="8" />
-											<path
-												d="m21 21-4.3-4.3"
-												stroke-linecap="round"
-											/>
-										</svg>
-									{:else if i === 1}
-										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5"
-											aria-hidden="true"
-										>
-											<circle cx="12" cy="12" r="3" />
-											<path
-												d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-											/>
-										</svg>
-									{:else}
-										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5"
-											aria-hidden="true"
-										>
-											<path
-												d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-											/>
-											<path
-												d="m9 12 2 2 4-4"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									{/if}
-									<span
-										class="font-[family-name:var(--font-display)] text-left text-xs font-semibold leading-snug text-zinc-200 transition group-hover:text-white sm:text-sm"
-									>
-										{item.label}
-									</span>
-								</a>
-							{/each}
-						</div>
-
+					<div use:reveal={80} class="min-w-0 lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:pt-6">
 						<div
-							use:reveal={160}
-							class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+							class="relative overflow-hidden rounded-3xl border border-cyan-300/15 bg-[#07111b]/95 p-3 shadow-[0_30px_90px_-42px_rgb(34_211_238/0.55),inset_0_1px_0_rgb(255_255_255/0.08)] sm:p-4"
 						>
-							<a
-								href="#contact"
-								class="group inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-zinc-950 shadow-[0_0_42px_-8px_rgb(34_211_238/0.75)] transition hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_0_52px_-8px_rgb(34_211_238/0.9)]"
+							<div
+								class="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(rgb(255_255_255/0.045)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.045)_1px,transparent_1px)] [background-size:24px_24px]"
+							></div>
+							<div
+								class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(34_211_238/0.18),transparent_42%)]"
+							></div>
+							<div class="relative mb-3 flex items-center justify-between gap-3 px-1">
+								<p
+									class="font-[family-name:var(--font-mono)] text-[10px] font-semibold uppercase tracking-[0.26em] text-cyan-300/90"
+								>
+									Workflow example
+								</p>
+								<div class="h-px flex-1 bg-linear-to-r from-cyan-300/35 to-transparent"></div>
+								<p class="text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-500">
+									Press play
+								</p>
+							</div>
+							<div
+								class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-[#050b12] shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 							>
-								<svg
-									class="h-4 w-4 shrink-0"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									aria-hidden="true"
-								>
-									<rect
-										x="3"
-										y="4"
-										width="18"
-										height="18"
-										rx="2"
-										ry="2"
-									/>
-									<line x1="16" y1="2" x2="16" y2="6" />
-									<line x1="8" y1="2" x2="8" y2="6" />
-									<line x1="3" y1="10" x2="21" y2="10" />
-								</svg>
-								Book a discovery call
-								<span
-									aria-hidden="true"
-									class="text-base leading-none transition group-hover:translate-x-0.5">→</span
-								>
-							</a>
+								<div class="aspect-video">
+									<iframe
+										src={heygenEmbedUrl}
+										title="HeyGen video player"
+										class="h-full w-full"
+										allow="encrypted-media; fullscreen;"
+										allowfullscreen
+										loading="lazy"
+									></iframe>
+								</div>
+							</div>
+							<p class="relative mt-3 px-1 text-xs leading-relaxed text-zinc-400">
+								A short example of what workflow-first automation can look like in practice.
+							</p>
 						</div>
 					</div>
 
-					<div use:reveal={80} class="min-w-0 lg:pt-6">
-						<SmeHeroDiagram />
+					<div class="grid gap-3 sm:grid-cols-3 lg:col-start-1 lg:row-start-2">
+						{#each heroFeatures as item, i}
+							<a
+								use:reveal={180 + i * 80}
+								href={item.href}
+								class="group flex min-h-20 gap-3 rounded-2xl border border-cyan-300/10 bg-linear-to-br from-cyan-300/[0.06] to-white/[0.025] p-3.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] transition hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-cyan-300/[0.07] hover:shadow-[0_18px_36px_-28px_rgb(34_211_238/0.7),inset_0_1px_0_rgb(255_255_255/0.08)]"
+							>
+								{#if i === 0}
+									<svg
+										class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										aria-hidden="true"
+									>
+										<circle cx="11" cy="11" r="8" />
+										<path
+											d="m21 21-4.3-4.3"
+											stroke-linecap="round"
+										/>
+									</svg>
+								{:else if i === 1}
+									<svg
+										class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										aria-hidden="true"
+									>
+										<circle cx="12" cy="12" r="3" />
+										<path
+											d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+										/>
+									</svg>
+								{:else}
+									<svg
+										class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										aria-hidden="true"
+									>
+										<path
+											d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+										/>
+										<path
+											d="m9 12 2 2 4-4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								{/if}
+								<span
+									class="font-[family-name:var(--font-display)] text-left text-xs font-semibold leading-snug text-zinc-200 transition group-hover:text-white sm:text-sm"
+								>
+									{item.label}
+								</span>
+							</a>
+						{/each}
+					</div>
+
+					<div
+						use:reveal={160}
+						class="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center lg:col-start-1 lg:row-start-3"
+					>
+						<a
+							href="#contact"
+							class="group inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-zinc-950 shadow-[0_0_42px_-8px_rgb(34_211_238/0.75)] transition hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_0_52px_-8px_rgb(34_211_238/0.9)]"
+						>
+							<svg
+								class="h-4 w-4 shrink-0"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								aria-hidden="true"
+							>
+								<rect
+									x="3"
+									y="4"
+									width="18"
+									height="18"
+									rx="2"
+									ry="2"
+								/>
+								<line x1="16" y1="2" x2="16" y2="6" />
+								<line x1="8" y1="2" x2="8" y2="6" />
+								<line x1="3" y1="10" x2="21" y2="10" />
+							</svg>
+							Book a discovery call
+							<span
+								aria-hidden="true"
+								class="text-base leading-none transition group-hover:translate-x-0.5">→</span
+							>
+						</a>
 					</div>
 				</div>
 
