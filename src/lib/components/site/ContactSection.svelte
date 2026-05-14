@@ -25,9 +25,14 @@
 			: 'focus:border-cyan-500/50 focus:ring-cyan-400/20'
 	);
 	const btnPrimary = $derived(
-		accent === 'amber'
-			? 'bg-amber-400 text-zinc-950 hover:bg-amber-300'
-			: 'bg-white text-zinc-950 hover:bg-zinc-100'
+		accent === "amber"
+			? "bg-amber-400 text-zinc-950 hover:bg-amber-300 shadow-[0_0_40px_-8px_rgb(251_191_36/0.45)]"
+			: "bg-cyan-400 text-zinc-950 hover:bg-cyan-300 shadow-[0_0_40px_-8px_rgb(34_211_238/0.45)]"
+	);
+	const successIconClass = $derived(
+		accent === "amber"
+			? "border-amber-400/30 bg-amber-400/10 text-amber-300"
+			: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
 	);
 
 	const formspreeAction = 'https://formspree.io/f/xdalawzp';
@@ -83,92 +88,112 @@
 				Tell me what you’re trying to achieve and what’s getting in the way. I’ll reply with the most sensible next step.
 			</p>
 
-			<form
-				method="POST"
-				action={formspreeAction}
-				bind:this={formEl}
-				onsubmit={handleSubmit}
-				class="relative mt-8 space-y-5"
-			>
-				{#if submitted}
-					<div class="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm text-zinc-300">
-						<span class="font-semibold text-white">Thanks — message sent.</span> I’ll get back to you shortly.
+			{#if submitted}
+				<div class="relative mt-8 flex flex-col items-center gap-5 py-8 text-center">
+					<div class="flex h-16 w-16 items-center justify-center rounded-full border {successIconClass}">
+						<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="m5 12 4 4L19 6" />
+						</svg>
 					</div>
-				{/if}
-				{#if error}
-					<div class="rounded-2xl border border-rose-500/30 bg-rose-500/10 px-5 py-4 text-sm text-rose-200">
-						{error}
+					<div>
+						<p class="text-lg font-semibold text-white">Message sent.</p>
+						<p class="mt-1 text-sm text-zinc-400">I’ll get back to you shortly.</p>
 					</div>
-				{/if}
-
-				<div class="grid gap-5 sm:grid-cols-2">
-					<div class="space-y-2">
-						<label for="cn-name" class="text-sm font-medium text-zinc-300">Name</label>
-						<input
-							id="cn-name"
-							name="name"
-							type="text"
-							autocomplete="name"
-							required
-							maxlength="200"
-							class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
-							placeholder="Your name"
-						/>
-					</div>
-					<div class="space-y-2">
-						<label for="cn-email" class="text-sm font-medium text-zinc-300">Work email</label>
-						<input
-							id="cn-email"
-							name="email"
-							type="email"
-							autocomplete="email"
-							required
-							class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
-							placeholder="you@company.com"
-						/>
-					</div>
-				</div>
-				<div class="space-y-2">
-					<label for="cn-company" class="text-sm font-medium text-zinc-300"
-						>Company <span class="font-normal text-zinc-600">(optional)</span></label
-					>
-					<input
-						id="cn-company"
-						name="company"
-						type="text"
-						autocomplete="organization"
-						maxlength="200"
-						class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
-						placeholder="Organisation name"
-					/>
-				</div>
-				<div class="space-y-2">
-					<label for="cn-message" class="text-sm font-medium text-zinc-300">Context &amp; details</label>
-					<textarea
-						id="cn-message"
-						name="message"
-						rows="5"
-						required
-						minlength="10"
-						maxlength="10000"
-						class="w-full resize-y rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
-						placeholder="Problem, team size, outcome you want, timing…"
-					></textarea>
-				</div>
-				<div class="flex flex-wrap items-center gap-4 pt-2">
 					<button
-						type="submit"
-						disabled={submitting}
-						class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition {btnPrimary}"
+						type="button"
+						class="text-sm text-zinc-600 underline-offset-4 transition hover:text-zinc-400 hover:underline"
+						onclick={() => { submitted = false; }}
 					>
-						{#if submitting}
-							Sending…
-						{:else}
-							Get in Touch
-						{/if}
+						Send another message
 					</button>
 				</div>
-			</form>
+			{:else}
+				<form
+					method="POST"
+					action={formspreeAction}
+					bind:this={formEl}
+					onsubmit={handleSubmit}
+					class="relative mt-8 space-y-5"
+				>
+					{#if error}
+						<div class="rounded-2xl border border-rose-500/30 bg-rose-500/10 px-5 py-4 text-sm text-rose-200">
+							{error}
+						</div>
+					{/if}
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						<div class="space-y-2">
+							<label for="cn-name" class="text-sm font-medium text-zinc-300">Name</label>
+							<input
+								id="cn-name"
+								name="name"
+								type="text"
+								autocomplete="name"
+								required
+								maxlength="200"
+								class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
+								placeholder="Your name"
+							/>
+						</div>
+						<div class="space-y-2">
+							<label for="cn-email" class="text-sm font-medium text-zinc-300">Email</label>
+							<input
+								id="cn-email"
+								name="email"
+								type="email"
+								autocomplete="email"
+								required
+								class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
+								placeholder="you@company.com"
+							/>
+						</div>
+					</div>
+					<div class="space-y-2">
+						<label for="cn-company" class="text-sm font-medium text-zinc-300"
+							>Company <span class="font-normal text-zinc-600">(optional)</span></label
+						>
+						<input
+							id="cn-company"
+							name="company"
+							type="text"
+							autocomplete="organization"
+							maxlength="200"
+							class="w-full rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
+							placeholder="Organisation name"
+						/>
+					</div>
+					<div class="space-y-2">
+						<label for="cn-message" class="text-sm font-medium text-zinc-300">Context &amp; details</label>
+						<textarea
+							id="cn-message"
+							name="message"
+							rows="5"
+							required
+							minlength="10"
+							maxlength="10000"
+							class="w-full resize-y rounded-xl border border-white/10 bg-[var(--color-surface-0)]/80 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition {focus} focus:ring-2"
+							placeholder="Problem, team size, outcome you want, timing…"
+						></textarea>
+					</div>
+					<div class="flex flex-wrap items-center gap-4 pt-2">
+						<button
+							type="submit"
+							disabled={submitting}
+							class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition disabled:opacity-70 {btnPrimary}"
+						>
+							{#if submitting}
+								<svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+									<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4z"></path>
+								</svg>
+								Sending…
+							{:else}
+								Get in Touch
+							{/if}
+						</button>
+					</div>
+				</form>
+			{/if}
 		</div>
 	</div>
 </section>

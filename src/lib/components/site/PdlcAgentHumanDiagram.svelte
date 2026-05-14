@@ -8,7 +8,7 @@
 		class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgb(255_255_255/0.06)_1px,transparent_1px)] [background-size:14px_14px]"
 	></div>
 	<div class="relative px-2 py-5 sm:px-4 sm:py-6">
-		<p class="mb-4 text-center text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-500 sm:text-xs">
+		<p class="mb-4 text-center text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-400 sm:text-xs">
 			Agent &amp; human workflow · PDLC
 		</p>
 		<div class="overflow-x-auto pb-1">
@@ -193,15 +193,15 @@
 
 		<!-- Legend -->
 		<div class="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-500">
+			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-400">
 				<span class="h-2.5 w-2.5 rounded-sm bg-amber-600/70"></span>
 				Human, intent, judgement &amp; gates
 			</span>
-			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-500">
+			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-400">
 				<span class="h-2.5 w-2.5 rounded-sm bg-violet-600/70"></span>
 				Agent, research, generation &amp; automation
 			</span>
-			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-500">
+			<span class="flex items-center gap-2 text-[10px] font-medium text-zinc-400">
 				<span class="block h-px w-5 border-t border-dashed border-zinc-600"></span>
 				Learning loop
 			</span>

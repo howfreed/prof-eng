@@ -32,7 +32,7 @@
 		<!-- Back -->
 		<a
 			href="/#recent-builds"
-			class="inline-flex items-center gap-2 text-sm text-zinc-500 transition hover:text-zinc-300"
+			class="inline-flex items-center gap-2 text-sm text-zinc-400 transition hover:text-zinc-300"
 		>
 			<span aria-hidden="true">←</span> Back to builds
 		</a>
@@ -58,7 +58,7 @@
 			</div>
 		{/if}
 
-		<p class="mt-6 leading-relaxed text-zinc-500">{build.desc}</p>
+		<p class="mt-6 leading-relaxed text-zinc-400">{build.desc}</p>
 
 		<!-- Sections -->
 		{#each build.sections as section}
@@ -93,7 +93,7 @@
 				<p class="text-base italic leading-relaxed text-zinc-300">{build.quote.text}</p>
 				<footer class="mt-4">
 					<span class="font-semibold text-zinc-200">{build.quote.author}</span>
-					<span class="ml-1 text-sm text-zinc-500">{build.quote.role}</span>
+					<span class="ml-1 text-sm text-zinc-400">{build.quote.role}</span>
 				</footer>
 			</blockquote>
 		{/if}

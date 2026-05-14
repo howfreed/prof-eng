@@ -144,32 +144,32 @@
 		>
 			<div class="mx-auto max-w-6xl">
 				<div
-					class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-14"
+					class="grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-12 xl:gap-14"
 				>
 					<div class="text-left">
 						<p
 							use:reveal
-							class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-400"
+							class="inline-flex rounded-full border border-cyan-300/15 bg-cyan-300/[0.055] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-300 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
 						>
-							Solve the bottlenecks first
+							REMOVE BOTTLENECKS IN YOUR WORKFLOW
 						</p>
 						<h1
 							use:reveal={60}
 							class="mt-4 font-[family-name:var(--font-display)] text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white sm:text-[3.5rem] lg:text-[3.25rem] lg:leading-[1.06]"
 						>
-							Stop losing time and money to <span class="text-cyan-300"
+							Stop losing time and money to <span class="bg-linear-to-r from-cyan-200 via-cyan-300 to-sky-400 bg-clip-text text-transparent"
 								>manual work.</span
 							>
 						</h1>
 						<p
-							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
+							class="mt-6 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-[1.05rem]"
 						>
 							Most small and medium businesses don’t need "more AI." They need AI applied
 							to the workflows that matter — meaning work moves faster,
 							with fewer delays, handoffs, and errors.
 						</p>
 						<p
-							class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
+							class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-[1.05rem]"
 						>
 							I help you identify where work is really slowing down,
 							then improve <span class="text-cyan-300">one</span>
@@ -177,23 +177,22 @@
 							tools cooperate.
 						</p>
 						<p
-						class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-300 sm:text-lg"
-					>
-						 Once that proves value, we expand to
-						the next workflows and train your team to use the
-						improved way of working so the gains stick.
-					</p>
+							class="mt-4 max-w-xl font-[family-name:var(--font-display)] text-base leading-relaxed text-zinc-400 sm:text-[1.05rem]"
+						>
+							Once that proves value, we expand to the next workflow and train your team to use
+							the improved ways of working so the gains stick.
+						</p>
 
 						<div class="mt-8 grid gap-3 sm:grid-cols-3">
 							{#each heroFeatures as item, i}
 								<a
 									use:reveal={180 + i * 80}
 									href={item.href}
-									class="flex gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-3 transition hover:border-cyan-500/30 hover:bg-white/[0.04]"
+									class="group flex min-h-20 gap-3 rounded-2xl border border-cyan-300/10 bg-linear-to-br from-cyan-300/[0.06] to-white/[0.025] p-3.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] transition hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-cyan-300/[0.07] hover:shadow-[0_18px_36px_-28px_rgb(34_211_238/0.7),inset_0_1px_0_rgb(255_255_255/0.08)]"
 								>
 									{#if i === 0}
 										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-400"
+											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -208,7 +207,7 @@
 										</svg>
 									{:else if i === 1}
 										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-400"
+											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -222,7 +221,7 @@
 										</svg>
 									{:else}
 										<svg
-											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-400"
+											class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300 transition group-hover:text-cyan-200"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -240,7 +239,7 @@
 										</svg>
 									{/if}
 									<span
-										class="font-[family-name:var(--font-display)] text-left text-xs font-medium leading-snug text-zinc-200 sm:text-sm"
+										class="font-[family-name:var(--font-display)] text-left text-xs font-semibold leading-snug text-zinc-200 transition group-hover:text-white sm:text-sm"
 									>
 										{item.label}
 									</span>
@@ -250,11 +249,11 @@
 
 						<div
 							use:reveal={160}
-							class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+							class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
 						>
 							<a
 								href="#contact"
-								class="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-zinc-950 shadow-[0_0_40px_-8px_rgb(34_211_238/0.55)] transition hover:bg-cyan-300"
+								class="group inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-zinc-950 shadow-[0_0_42px_-8px_rgb(34_211_238/0.75)] transition hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_0_52px_-8px_rgb(34_211_238/0.9)]"
 							>
 								<svg
 									class="h-4 w-4 shrink-0"
@@ -279,7 +278,7 @@
 								Book a discovery call
 								<span
 									aria-hidden="true"
-									class="text-base leading-none">→</span
+									class="text-base leading-none transition group-hover:translate-x-0.5">→</span
 								>
 							</a>
 						</div>
@@ -331,12 +330,7 @@
 							Who am I?
 						</p>
 						<div class="mt-3 h-px w-6 bg-cyan-300"></div>
-						<h2
-							class="mt-6 max-w-3xl font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.65rem] lg:leading-[1.08]"
-						>
-							Enterprise experience for
-							<span class="text-cyan-300">your business.</span>
-						</h2>
+				
 						<div class="mt-10 flex flex-col gap-7 sm:flex-row sm:items-start">
 							<div
 								class="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border border-cyan-300/45 bg-[#07111b] p-1.5 shadow-[0_0_42px_-12px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.12)]"
@@ -459,10 +453,10 @@
 					{#each [{ icon: "target", title: "I know where delivery breaks", body: "I've led delivery in complex environments where delays, rework, and unclear ownership become expensive. I can spot the real bottleneck, not just automate the visible task." }, { icon: "code", title: "I can make it practical", body: "I still write code, ship product, and use the AI tools I recommend. If I suggest automating a step, it is because I understand how it works in practice." }, { icon: "person", title: "You work directly with me", body: "No layers, no juniors, no handoff. I help diagnose the problem, redesign the workflow, and guide the first practical implementation from start to finish." }] as card, i}
 						<div
 							use:reveal={i * 100}
-							class="card-lift flex h-full flex-col rounded-xl border border-cyan-300/15 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+							class="card-lift group flex h-full flex-col rounded-2xl border border-cyan-300/15 bg-linear-to-br from-cyan-300/[0.055] to-[#07111b]/75 p-6 shadow-[0_18px_48px_-36px_rgb(34_211_238/0.75),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:-translate-y-0.5 hover:border-cyan-300/35"
 						>
 							<div
-								class="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-14px_rgb(34_211_238/0.9)]"
+								class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-[0_0_28px_-14px_rgb(34_211_238/0.9)] transition group-hover:border-cyan-300/35 group-hover:bg-cyan-300/[0.14]"
 							>
 								{#if card.icon === "target"}
 									<svg
@@ -511,7 +505,7 @@
 							>
 								{card.title}
 							</h3>
-							<div class="mt-4 h-px w-10 bg-cyan-300"></div>
+							<div class="mt-4 h-px w-10 bg-linear-to-r from-cyan-300 to-transparent"></div>
 							<p
 								class="mt-5 flex-1 text-sm leading-relaxed text-zinc-300"
 							>
@@ -537,7 +531,7 @@
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						Small business owners need AI that truly helps.
+						Business owners need AI that adds value.
 					</h2>
 					<p class="mt-3 text-lg leading-relaxed text-zinc-300">
 						They want <span class="font-semibold text-cyan-300"
@@ -550,14 +544,14 @@
 					{#each ownerQuotes as quote, i}
 						<li
 							use:reveal={i * 60}
-							class="card-lift relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-5 shadow-[0_0_34px_-24px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)]"
+							class="card-lift relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-linear-to-br from-cyan-300/[0.055] to-[#07111b]/75 p-5 shadow-[0_0_34px_-24px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)]"
 						>
 							<div
 								class="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:20px_20px]"
 							></div>
 							<div class="relative flex gap-4">
 								<div
-									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-300/10 text-cyan-200 shadow-[0_0_22px_-8px_rgb(34_211_238/0.9)]"
+									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-300/10 text-cyan-200 shadow-[0_0_22px_-8px_rgb(34_211_238/0.9)]"
 								>
 									<svg
 										class="h-5 w-5"
@@ -659,7 +653,7 @@
 					{#each stats as s, i}
 						<div
 							use:reveal={i * 100}
-							class="card-lift group relative overflow-hidden rounded-xl border border-cyan-300/25 bg-[#07111b]/75 p-7 shadow-[0_0_40px_-26px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
+							class="card-lift group relative overflow-hidden rounded-2xl border border-cyan-300/25 bg-linear-to-br from-cyan-300/[0.065] to-[#07111b]/78 p-7 shadow-[0_0_40px_-26px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:-translate-y-0.5 hover:border-cyan-300/45"
 						>
 							<div
 								class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:22px_22px]"
@@ -669,7 +663,7 @@
 							>
 								<div>
 									<p
-										class="font-[family-name:var(--font-display)] text-5xl font-bold leading-none text-cyan-300 md:text-6xl"
+										class="bg-linear-to-br from-cyan-100 via-cyan-300 to-sky-400 bg-clip-text font-[family-name:var(--font-display)] text-5xl font-bold leading-none text-transparent md:text-6xl"
 									>
 										{s.value}
 									</p>
@@ -798,7 +792,7 @@
 					<h2
 						class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 					>
-						A practical path from bottleneck to better workflow.
+					From bottlenecks to better workflows.
 					</h2>
 					<p
 						class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg"
@@ -811,20 +805,16 @@
 				</div>
 				<div class="mt-10 grid gap-5 lg:grid-cols-3">
 					{#each serviceSteps as step, i}
-						<div
+						<a
 							use:reveal={i * 100}
-							class="card-lift group relative flex min-h-[17rem] flex-col overflow-hidden rounded-2xl border border-cyan-300/25 bg-[#07111b]/75 p-6 shadow-[0_0_42px_-28px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45"
+							href={step.href}
+							class="card-lift group relative flex min-h-[17rem] flex-col overflow-hidden rounded-2xl border border-cyan-300/25 bg-linear-to-br from-cyan-300/[0.065] to-[#07111b]/78 p-6 shadow-[0_0_42px_-28px_rgb(34_211_238/0.95),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:-translate-y-0.5 hover:border-cyan-300/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500/50"
 						>
-							<a
-								href={step.href}
-								class="absolute inset-0 z-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500/50"
-								aria-label={`${step.subtitle} — service details`}
-							></a>
 							<div
 								class="pointer-events-none absolute inset-0 opacity-[0.2] [background-image:linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:22px_22px]"
 							></div>
 							<div
-								class="relative z-10 flex h-full flex-col pointer-events-none"
+								class="relative flex h-full flex-col"
 							>
 								<div
 									class="flex items-start justify-between gap-4"
@@ -917,7 +907,7 @@
 								<span
 									class="mt-7 text-sm font-medium text-zinc-300 transition group-hover:text-cyan-300/90"
 								>
-									Details
+									Details <span aria-hidden="true">→</span>
 								</span>
 							</div>
 							<div
@@ -928,7 +918,7 @@
 									class="absolute left-1/2 top-1/2 h-px w-24 -translate-x-1/2 -translate-y-1/2 bg-linear-to-r from-transparent via-cyan-300/60 to-transparent"
 								></span>
 							</div>
-						</div>
+						</a>
 					{/each}
 				</div>
 				{#if integrationService}
@@ -977,7 +967,7 @@
 							</div>
 							<div>
 								<p
-									class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500"
+									class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400"
 								>
 									Supporting glue
 								</p>
@@ -1021,20 +1011,26 @@
 							A real workflow
 						</p>
 						<h2
-							class="mt-3 max-w-2xl font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
+							class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 						>
-							Month-end close reveals where the workflow breaks.
+							Month-end close, redesigned.
 						</h2>
+						<p class="mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+							Here is what “workflow first” looks like in practice: fewer manual handoffs,
+							clear exception handling, and AI used where it can safely speed up the work.
+						</p>
 					</div>
-					<p class="text-base leading-relaxed text-zinc-300 lg:pt-5">
-						For many finance teams, month-end is where delays,
-						handoffs, and rework become obvious. Reconciliations,
-						commentary, approvals, and exceptions still bounce
-						between people and spreadsheets. The opportunity is not
-						another tool. It is one clearer workflow that moves
-						faster, with AI handling the repeatable work and finance
-						keeping control of the judgement.
-					</p>
+					<div
+						class="rounded-2xl border border-cyan-300/20 bg-linear-to-br from-cyan-300/[0.06] to-[#07111b]/75 p-5 shadow-[0_20px_54px_-38px_rgb(34_211_238/0.8),inset_0_1px_0_rgb(255_255_255/0.07)]"
+					>
+						<p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300/90">
+							The principle
+						</p>
+						<p class="mt-3 text-sm leading-relaxed text-zinc-300">
+							Automate the repeatable path, keep humans on judgement and exceptions, then
+							measure whether the work actually got easier.
+						</p>
+					</div>
 				</div>
 
 				<div use:reveal={80} class="mt-10">
@@ -1044,7 +1040,7 @@
 				<div class="mt-6 grid gap-5 lg:grid-cols-3">
 					<div
 						use:reveal
-						class="card-lift rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						class="card-lift rounded-2xl border border-cyan-300/25 bg-linear-to-br from-cyan-300/[0.06] to-[#07111b]/75 p-6 shadow-[0_18px_48px_-36px_rgb(34_211_238/0.75),inset_0_1px_0_rgb(255_255_255/0.07)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1091,7 +1087,7 @@
 					</div>
 					<div
 						use:reveal={80}
-						class="card-lift rounded-2xl border border-violet-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						class="card-lift rounded-2xl border border-violet-300/25 bg-linear-to-br from-violet-300/[0.06] to-[#07111b]/75 p-6 shadow-[0_18px_48px_-36px_rgb(167_139_250/0.65),inset_0_1px_0_rgb(255_255_255/0.07)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1134,7 +1130,7 @@
 					</div>
 					<div
 						use:reveal={160}
-						class="card-lift rounded-2xl border border-emerald-300/25 bg-[#07111b]/70 p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
+						class="card-lift rounded-2xl border border-emerald-300/25 bg-linear-to-br from-emerald-300/[0.055] to-[#07111b]/75 p-6 shadow-[0_18px_48px_-36px_rgb(52_211_153/0.55),inset_0_1px_0_rgb(255_255_255/0.07)]"
 					>
 						<div class="flex items-start gap-4">
 							<div
@@ -1201,7 +1197,7 @@
 						<h2
 							class="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[2.75rem] lg:leading-[1.06]"
 						>
-							Help your team use AI well — from day one
+							AI workshops for your business
 						</h2>
 						<p
 							class="mt-4 max-w-xl text-base leading-relaxed text-zinc-300"
@@ -1224,7 +1220,7 @@
 						<li use:reveal={i * 80}>
 							<a
 								href="/workshops/sme/{w.slug}"
-								class="card-lift group flex h-full flex-col rounded-2xl border border-cyan-300/25 bg-[#07111b]/70 p-6 shadow-[0_0_36px_-26px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:border-cyan-300/45 hover:bg-[#07111b]/85"
+								class="card-lift group flex h-full flex-col rounded-2xl border border-cyan-300/25 bg-linear-to-br from-cyan-300/[0.055] to-[#07111b]/75 p-6 shadow-[0_0_36px_-26px_rgb(34_211_238/0.9),inset_0_1px_0_rgb(255_255_255/0.07)] transition hover:-translate-y-0.5 hover:border-cyan-300/45 hover:bg-[#07111b]/85"
 							>
 								<div class="flex flex-wrap items-center gap-3">
 									<span
@@ -1328,7 +1324,7 @@
 					{/each}
 				</ul>
 				<p
-					class="mt-6 flex items-start justify-center gap-3 text-center text-sm text-zinc-500"
+					class="mt-6 flex items-start justify-center gap-3 text-center text-sm text-zinc-400"
 				>
 					<span
 						class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-cyan-300/35 text-cyan-300"

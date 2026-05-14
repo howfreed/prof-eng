@@ -65,7 +65,7 @@
 	<div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_5%,rgb(34_211_238/0.12),transparent_36%)]"></div>
 
 	<div class="relative">
-		<p class="text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+		<p class="text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-400">
 			Illustrative workflow - month-end close
 		</p>
 
@@ -136,7 +136,7 @@
 						</svg>
 						<div>
 							<p class="text-xs font-semibold text-zinc-200">Exception queue</p>
-							<p class="text-[11px] text-zinc-500">Items for human follow-up</p>
+							<p class="text-[11px] text-zinc-400">Items for human follow-up</p>
 						</div>
 					</div>
 				</div>

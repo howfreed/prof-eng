@@ -126,16 +126,9 @@ const services = listServices('prodeng');
 					</a>
 					<a
 						href="#how-it-works"
-						class="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-amber-200/90 hover:underline"
+						class="text-sm font-medium text-zinc-400 underline-offset-4 transition hover:text-amber-200/90 hover:underline"
 					>
 						See the approach →
-					</a>
-					<a
-						href="#recent-builds"
-						class="inline-flex items-center gap-1.5 text-sm font-medium text-amber-400/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
-					>
-						<span class="rounded-full bg-amber-400/15 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-300">New</span>
-						AI Accelerator for Product Teams →
 					</a>
 				</div>
 			</div>
@@ -179,7 +172,7 @@ const services = listServices('prodeng');
 				</div>
 
 				<!-- Why me -->
-				<p use:reveal class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Why me</p>
+				<p use:reveal class="mt-14 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">Why me</p>
 				<div class="mt-6 grid gap-4 sm:grid-cols-3">
 					{#each [
 						{ title: 'Delivery at scale', body: "Banking, FTSE 100 transformation, logistics — I've led delivery inside those environments. I know where execution breaks because I've run it, not just advised on it." },
@@ -201,7 +194,7 @@ const services = listServices('prodeng');
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Research and experience tell the same story
 					</h2>
-					<p class="mx-auto mt-3 max-w-xl text-zinc-500">
+					<p class="mx-auto mt-3 max-w-xl text-zinc-400">
 						Large-scale survey evidence lines up with what shows up in leadership conversations.
 					</p>
 				</div>
@@ -215,7 +208,7 @@ const services = listServices('prodeng');
 								{s.value}
 							</p>
 							<p class="mt-2 text-sm font-medium text-zinc-300">{s.label}</p>
-							<p class="mt-3 text-sm leading-relaxed text-zinc-500">{s.sub}</p>
+							<p class="mt-3 text-sm leading-relaxed text-zinc-400">{s.sub}</p>
 						</div>
 					{/each}
 				</div>
@@ -261,7 +254,7 @@ const services = listServices('prodeng');
 				<!-- PDLC phases -->
 				<div>
 					<p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80">Product lifecycle · PDLC</p>
-					<p class="mt-2 text-sm text-zinc-500">
+					<p class="mt-2 text-sm text-zinc-400">
 						From first bet to measured outcomes — "done" includes adoption and learning, not only a release.
 					</p>
 					<ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -291,7 +284,7 @@ const services = listServices('prodeng');
 					<h2 class="font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Services scaled to you
 					</h2>
-					<p class="mt-2 text-zinc-500">
+					<p class="mt-2 text-zinc-400">
 						Assessment, delivery, coaching, and MVP builds, right-sized for your product and engineering stage.
 					</p>
 				</div>
@@ -324,7 +317,7 @@ const services = listServices('prodeng');
 						<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 							Hands-on sessions for teams and leaders
 						</h2>
-						<p class="mt-3 text-sm text-zinc-500">
+						<p class="mt-3 text-sm text-zinc-400">
 							Practical working sessions on product and engineering delivery, grounded in how work actually flows,
 							not tooling for its own sake. You leave with clarity and concrete next steps.
 						</p>
@@ -359,7 +352,7 @@ const services = listServices('prodeng');
 						</li>
 					{/each}
 				</ul>
-				<p class="mt-10 text-center text-sm text-zinc-500">
+				<p class="mt-10 text-center text-sm text-zinc-400">
 					Delivered in person or remotely. Bespoke formats available, use the form below to scope one.
 				</p>
 			</div>
@@ -372,35 +365,38 @@ const services = listServices('prodeng');
 					<h2 class="mt-2 font-[family-name:var(--font-display)] text-2xl font-semibold text-white sm:text-3xl">
 						Not just advice. Real builds.
 					</h2>
-					<p class="mt-3 text-zinc-500">Shipping and shaping products, not only strategy decks.</p>
+					<p class="mt-3 text-zinc-400">Shipping and shaping products, not only strategy decks.</p>
 				</div>
 				<div class="mt-12 grid gap-6 lg:grid-cols-2">
 					{#each recentBuilds as build, i}
-						<div use:reveal={i * 100} class="card-lift group relative flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30">
-							<a href={build.href} target={build.href.startsWith('http') ? '_blank' : undefined} rel={build.href.startsWith('http') ? 'noopener noreferrer' : undefined} class="absolute inset-0 z-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50" aria-label={build.title}></a>
-							<div class="relative z-10 flex flex-col pointer-events-none">
-								<span class="self-start rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300/90">{build.tag}</span>
-								<h3 class="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold text-white">{build.title}</h3>
-								<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-300">{build.desc}</p>
-								{#if build.chips.length > 0}
-									<div class="mt-5 flex flex-wrap gap-2">
-										{#each build.chips as chip}
-											<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300">{chip}</span>
-										{/each}
-									</div>
-								{/if}
-								{#if build.quote}
-									<blockquote class="mt-5 rounded-xl border-l-2 border-amber-500/40 bg-amber-500/[0.04] px-5 py-4">
-										<p class="text-sm italic leading-relaxed text-zinc-300">{build.quote.text}</p>
-										<footer class="mt-3 text-xs text-zinc-300">
-											<span class="font-semibold text-zinc-200">{build.quote.author}</span>
-											<span class="text-zinc-600"> , {build.quote.role}</span>
-										</footer>
-									</blockquote>
-								{/if}
-								<span class="mt-5 text-sm font-medium text-amber-400/80 transition group-hover:text-amber-300">Learn more →</span>
-							</div>
-						</div>
+						<a
+							use:reveal={i * 100}
+							href={build.href}
+							target={build.href.startsWith('http') ? '_blank' : undefined}
+							rel={build.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+							class="card-lift group flex flex-col rounded-2xl border border-white/10 bg-[var(--color-surface-2)]/60 p-6 transition hover:border-amber-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500/50"
+						>
+							<span class="self-start rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300/90">{build.tag}</span>
+							<h3 class="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold text-white">{build.title}</h3>
+							<p class="mt-3 flex-1 text-sm leading-relaxed text-zinc-300">{build.desc}</p>
+							{#if build.chips.length > 0}
+								<div class="mt-5 flex flex-wrap gap-2">
+									{#each build.chips as chip}
+										<span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300">{chip}</span>
+									{/each}
+								</div>
+							{/if}
+							{#if build.quote}
+								<blockquote class="mt-5 rounded-xl border-l-2 border-amber-500/40 bg-amber-500/[0.04] px-5 py-4">
+									<p class="text-sm italic leading-relaxed text-zinc-300">{build.quote.text}</p>
+									<footer class="mt-3 text-xs text-zinc-300">
+										<span class="font-semibold text-zinc-200">{build.quote.author}</span>
+										<span class="text-zinc-600"> , {build.quote.role}</span>
+									</footer>
+								</blockquote>
+							{/if}
+							<span class="mt-5 text-sm font-medium text-amber-400/80 transition group-hover:text-amber-300">Learn more →</span>
+						</a>
 					{/each}
 				</div>
 			</div>

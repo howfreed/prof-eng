@@ -5,19 +5,17 @@
 	let mobileOpen = $state(false);
 
 	const navSme = [
-	{ href: '#about', label: 'About' },
-	{ href: '#problems', label: 'Who' },
-	{ href: '#services', label: 'How I Help' },
-	{ href: '#workshops', label: 'Workshops' },
-		{ href: '#contact', label: 'Contact' }
+		{ href: '#about', label: 'About' },
+		{ href: '#problems', label: "Who it's for" },
+		{ href: '#services', label: 'How I Help' },
+		{ href: '#workshops', label: 'Workshops' }
 	];
 
 	const navProd = [
 		{ href: '#how-it-works', label: 'How it works' },
 		{ href: '#services', label: 'Services' },
 		{ href: '#workshops', label: 'Workshops' },
-		{ href: '#about', label: 'About' },
-		{ href: '#contact', label: 'Contact' }
+		{ href: '#about', label: 'About' }
 	];
 
 	const links = $derived(site === 'prodeng' ? navProd : navSme);
@@ -66,8 +64,8 @@
 				{:else}
 					<span class="{brandSizeClass}">
 						<span class={brandClass}>agentnative</span>
-						<span class="text-zinc-500"> co.</span>
-						<span class="ml-2 hidden text-xs font-normal text-zinc-500 sm:inline">· product engineering</span>
+						<span class="text-zinc-400"> co.</span>
+						<span class="ml-2 hidden text-xs font-normal text-zinc-400 sm:inline">· product engineering</span>
 					</span>
 				{/if}
 			</a>
@@ -81,9 +79,9 @@
 			{/each}
 		</nav>
 		<div class="flex items-center gap-2">
-			{#if site === 'prodeng'}
-				<a href="#contact" class="hidden sm:inline-flex {ctaClass}"> Book a call </a>
-			{/if}
+			<a href="#contact" class="hidden sm:inline-flex {ctaClass}">
+				{site === 'prodeng' ? 'Book a call' : 'Book a discovery call'}
+			</a>
 			<button
 				type="button"
 				class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] p-2 text-zinc-300 transition hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 {focusRing} lg:hidden"

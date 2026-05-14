@@ -48,12 +48,12 @@
 	<main class="mx-auto max-w-3xl px-4 pb-24 pt-28 sm:px-6 sm:pt-32">
 		<a
 			href={backHref}
-			class="inline-flex items-center gap-2 text-sm text-zinc-500 transition hover:text-zinc-300"
+			class="inline-flex items-center gap-2 text-sm text-zinc-400 transition hover:text-zinc-300"
 		>
 			<span aria-hidden="true">←</span> Back to services
 		</a>
 
-		<p class="mt-8 font-[family-name:var(--font-mono)] text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-500">
+		<p class="mt-8 font-[family-name:var(--font-mono)] text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-400">
 			{site === 'sme' ? 'What this solves' : 'Service'}
 		</p>
 		<h1 class="mt-3 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight text-white sm:text-4xl">
@@ -70,7 +70,7 @@
 		</div>
 
 		<p class="mt-8 text-lg leading-relaxed text-zinc-300">{service.desc}</p>
-		<p class="mt-6 leading-relaxed text-zinc-500">{service.lede}</p>
+		<p class="mt-6 leading-relaxed text-zinc-400">{service.lede}</p>
 
 		<section class="mt-12">
 			<h2 class="font-[family-name:var(--font-display)] text-xl font-semibold text-white">What’s included</h2>
@@ -87,7 +87,7 @@
 		{#if service.idealFor && service.idealFor.length > 0}
 			<section class="mt-12">
 				<h2 class="font-[family-name:var(--font-display)] text-xl font-semibold text-white">Good fit when</h2>
-				<ul class="mt-4 space-y-3 text-sm leading-relaxed text-zinc-500">
+				<ul class="mt-4 space-y-3 text-sm leading-relaxed text-zinc-400">
 					{#each service.idealFor as line}
 						<li class="flex gap-2">
 							<span class="text-zinc-600">•</span>
@@ -107,10 +107,10 @@
 			<a
 				href="/#contact"
 				class="mt-5 inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition {accent === 'amber'
-					? 'bg-amber-400 text-zinc-950 hover:bg-amber-300'
-					: 'bg-cyan-400 text-zinc-950 hover:bg-cyan-300'}"
+					? 'bg-amber-400 text-zinc-950 hover:bg-amber-300 shadow-[0_0_40px_-8px_rgb(251_191_36/0.45)]'
+					: 'bg-cyan-400 text-zinc-950 hover:bg-cyan-300 shadow-[0_0_40px_-8px_rgb(34_211_238/0.45)]'}"
 			>
-				Enquire via contact
+				Get in touch
 			</a>
 		</div>
 	</main>
