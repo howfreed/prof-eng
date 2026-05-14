@@ -118,7 +118,7 @@
 		(service) => service.slug === "lightweight-integration",
 	);
 
-	const heygenEmbedUrl = "https://app.heygen.com/embeds/4f10e4fbdc5a48039716aaa67e00c4ae";
+	const heygenEmbedUrl = "https://app.heygen.com/embeds/6ba75f0ba5024ad4826f78300fbf44a2";
 </script>
 
 <div class="relative min-h-screen overflow-x-hidden">
