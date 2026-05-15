@@ -118,7 +118,7 @@
 		(service) => service.slug === "lightweight-integration",
 	);
 
-	const heygenEmbedUrl = "https://app.heygen.com/embeds/6ba75f0ba5024ad4826f78300fbf44a2";
+	const heygenEmbedUrl = "https://app.heygen.com/embeds/4fad04919c37484b951f3a4f65cae1d7";
 </script>
 
 <div class="relative min-h-screen overflow-x-hidden">
@@ -212,7 +212,7 @@
 								<div class="aspect-video">
 									<iframe
 										src={heygenEmbedUrl}
-										title="HeyGen video player"
+										title="Agentnative: Financial Automation Workflow Example v2"
 										class="h-full w-full"
 										allow="encrypted-media; fullscreen;"
 										allowfullscreen
